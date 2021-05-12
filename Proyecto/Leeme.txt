@@ -1,51 +1,41 @@
 ## Tema:
 Claro: videojuego de terror atmosférico
-
-## Integrantes del grupo:
+## Integrantes:
 - German Dartsch
 - Victor Franco
 - Exequiel Moreno
 - Diego Zabala
 - Facundo Nimes
-
 ## Resumen:
-Claro es un videojuego cooperativo de dos jugadores en línea.
+Videojuego cooperativo de dos jugadores en línea.
 Género: terror.
-Mecánica principal: Comunicación entre dos jugadores con saber asimétrico donde deben cooperar para 
-explorar y resolver acertijos en una casa en la que uno de los dos se encuentra atrapado.
+Mecánica: Comunicación entre dos jugadores con saber asimétrico donde deben cooperar para
+explorar y resolver acertijos y escapar de una casa en la están atrapados.
 -----------------
-Premisa: Uno de los jugadores ha sido secuestrado y se encuentra atrapado en una casa completamente 
+Premisa: Los jugadores han sido secuestrados y se encuentran en una casa completamente
 sellada y plagada de trampas mortales.
-Asimismo, su secuestrador está constantemente buscándolo para asignarle tareas con consignas intricadas 
-e inentendibles, castigándolo duramente si no las cumple en determinado tiempo.
-El jugador 1 debe escapar de ese lugar antes de enloquecer. Sin embargo, no tiene información alguna 
-de en qué lugar de la casa se encuentra, de dónde están las trampas ni de cómo resolver los acertijos 
-de su secuestrador. Lo único que tiene a su favor es la comunicación con el jugador 2 vía telefónica 
-(chat de voz).
-El jugador 2 en cambio, cuenta con un mapa de la casa y la ubicación de las trampas y detalles sobre 
-cómo resolver los acertijos. Pero como desventaja, este jugador 2 no puede ver absolutamente nada de la 
-casa ni de los acertijos, y depende de la explicación del jugador 1 para indicarle cómo escapar.
+Asimismo, su secuestrador está constantemente buscándolos para asignarle tareas con consignas intricadas
+e inentendibles, castigándolos duramente si no las cumplen en determinado tiempo.
+El jugador 1 debe escapar de ese lugar y salvar al otro. Sin embargo, no tiene información alguna
+de en qué lugar de la casa se encuentra, de dónde están las trampas ni de cómo resolver los acertijos
+de su secuestrador. Lo único que tiene a su favor es la comunicación con el jugador 2 vía telefónica.
+El jugador 2 en cambio, se encuentra atrapado en una habitación sellada y debe ser rescatado por el jugador 1,
+cuenta con un mapa de la casa y la ubicación de las trampas y detalles sobre
+cómo resolver los acertijos. Como desventaja, este jugador 2 no puede ver nada de la
+casa ni de los acertijos, depende de la explicación del jugador para darle información correcta.
 -----------------
 Tecnología:
 El lenguaje de programación a utilizar será Python, versión 3.9.4.
 Como editor de código, utilizaremos Emacs o PyCharm integrado al entorno de desarrollo Panda.
-Asimismo utilizaremos Blender para modelado de objetos 3d en caso de ser necesario.
-Panda es un entorno de desarrolo orientado al manejo de gráficos, audio, E/S, renderizado de objetos 3d 
-y detección de colisiones entre los mismos, así como otras características relevantes para la creación de 
-juegos en 3D. El lenguaje de programación de videojuegos para el que fue destinado Panda es Python.
-Panda es un proyecto de código abierto y software libre bajo la licencia BSD Revisada. 
-Blender es un programa informático multiplataforma, dedicado especialmente al modelado, iluminación, 
-renderizado, la animación y creación de gráficos tridimensionales. También de composición digital utilizando 
-la técnica procesal de nodos, edición de vídeo, escultura (incluye topología dinámica) y pintura digital.
-Blender es un proyecto de software libre bajo la GNU General Public License.
-
-Desarrollaremos este trabajo en los sistemas operativos Debian 10 y Ubuntu (a elección de cada miembro del equipo)
+Utilizaremos Blender para modelado de objetos 3d.
+Panda es un entorno de desarrolo orientado al manejo de gráficos, audio, E/S, renderizado de objetos 3d
+y detección de colisiones entre los mismos, así como otras características relevantes para la creación de
+juegos en 3D.
+Panda es un proyecto de código abierto y software libre bajo la licencia BSD Revisada.
+Blender es un programa informático multiplataforma, dedicado especialmente al modelado de gráficos tridimensionales. Blender es un proyecto de software libre bajo la GNU General Public License.
+Desarrollaremos este trabajo en sistemas operativos Linux
 Tendremos un repositorio de Git como control de versionado del proyecto.
 Librerías extra: - Pygame (ofrece diversas herramientas para desarrollo de videojuegos en python).
 - PyOpenGL (librería para la gestión del render de video).
------------------
-Metodología de trabajo:
-Se aplicará un modelo de desarrollo ágil iterativo incremental. Se aspira a producir un prototipo cada dos semanas y 
-una etapa breve de testeo, siendo la primera iteración un producto mínimo viable. Luego de cada iteración, se dará 
-inicio a la nueva con un sprint planning (scrumm) donde se delimitarán las tareas y responsabilidades de cada miembro 
-en base a los resultados de la iteración pasada.
+
+Link al repositorio en GitHub: https://github.com/gdartsch2/TP4-TT-Proyectos-GrupoC-T
