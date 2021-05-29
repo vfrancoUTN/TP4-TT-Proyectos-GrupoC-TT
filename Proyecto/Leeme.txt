@@ -5,7 +5,6 @@ Claro: videojuego de terror atmosférico
 - Victor Franco
 - Exequiel Moreno
 - Diego Zabala
-- Facundo Nimes
 ## Resumen:
 Videojuego cooperativo de dos jugadores en línea.
 Género: terror.
@@ -25,17 +24,12 @@ cómo resolver los acertijos. Como desventaja, este jugador 2 no puede ver nada 
 casa ni de los acertijos, depende de la explicación del jugador para darle información correcta.
 -----------------
 Tecnología:
-El lenguaje de programación a utilizar será Python, versión 3.9.4.
-Como editor de código, utilizaremos Emacs o PyCharm integrado al entorno de desarrollo Panda.
+El lenguaje de programación a utilizar será GDScript.
+Como entorno de desarrollo, utilizaremos Godot Engine 3.3.2.
 Utilizaremos Blender para modelado de objetos 3d.
-Panda es un entorno de desarrolo orientado al manejo de gráficos, audio, E/S, renderizado de objetos 3d
-y detección de colisiones entre los mismos, así como otras características relevantes para la creación de
-juegos en 3D.
-Panda es un proyecto de código abierto y software libre bajo la licencia BSD Revisada.
-Blender es un programa informático multiplataforma, dedicado especialmente al modelado de gráficos tridimensionales. Blender es un proyecto de software libre bajo la GNU General Public License.
+ACTUALIZAR INFO SOBRE GODOT Y GDSCRIPT
+Blender es un proyecto de software libre bajo la GNU General Public License.
 Desarrollaremos este trabajo en sistemas operativos Linux
 Tendremos un repositorio de Git como control de versionado del proyecto.
-Librerías extra: - Pygame (ofrece diversas herramientas para desarrollo de videojuegos en python).
-- PyOpenGL (librería para la gestión del render de video).
 
 Link al repositorio en GitHub: https://github.com/gdartsch2/TP4-TT-Proyectos-GrupoC-T
