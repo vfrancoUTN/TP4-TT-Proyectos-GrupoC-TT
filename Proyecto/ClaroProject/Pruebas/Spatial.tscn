@@ -57,4 +57,4 @@ environment = SubResource( 2 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.36012, -10.5222 )
 
 [node name="Trampa" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3411, -11.3976, 16.8298 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 33.179, -10.6439, 16.3816 )

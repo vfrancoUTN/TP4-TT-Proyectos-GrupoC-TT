@@ -36,6 +36,9 @@ func _physics_process(delta):
 	velocidad = move_and_slide(velocidad, Vector3.UP, true)
 	
 func morir():
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			get_tree().set_input_as_handled()
 	get_tree().change_scene("res://Interfaz/PantallaDerrota.tscn")
 	
 func ganar():
