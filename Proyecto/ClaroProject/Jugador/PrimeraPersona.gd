@@ -3,7 +3,8 @@ extends KinematicBody
 onready var camara = $Pivote/Camera
 
 var gravedad = -30
-var velocidadMaxima = 8
+export var velocidadMaxima = 5
+export var aceleracion = 2
 var sensibilidadMouse = 0.002 #medido en radianes por pixel
 
 var velocidad = Vector3()
@@ -26,10 +27,14 @@ func _unhandled_input(event):
 		rotate_y(-event.relative.x * sensibilidadMouse)
 		$Pivote.rotate_x(-event.relative.y * sensibilidadMouse)
 		$Pivote.rotation.x = clamp($Pivote.rotation.x, -1.2, 1.2)
-	
+
 func _physics_process(delta):
 	velocidad.y += gravedad * delta
 	var velocidadDeseada = recibirControles() * velocidadMaxima
+	if Input.is_action_pressed("Correr"):
+		velocidadDeseada = velocidadDeseada * aceleracion
+	else:
+		velocidadDeseada = recibirControles() * velocidadMaxima
 	
 	velocidad.x = velocidadDeseada.x
 	velocidad.z = velocidadDeseada.z
