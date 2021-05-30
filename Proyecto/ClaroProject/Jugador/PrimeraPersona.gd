@@ -1,6 +1,7 @@
 extends KinematicBody
 
 onready var camara = $Pivote/Camera
+onready var animacionCamara = $Pivote/Camera/AnimationPlayer
 
 var gravedad = -30
 export var velocidadMaxima = 5
@@ -39,6 +40,9 @@ func _physics_process(delta):
 	velocidad.x = velocidadDeseada.x
 	velocidad.z = velocidadDeseada.z
 	velocidad = move_and_slide(velocidad, Vector3.UP, true)
+	
+	if velocidad != Vector3():
+		animacionCamara.play("MovimientoCabeza")
 	
 func morir():
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
