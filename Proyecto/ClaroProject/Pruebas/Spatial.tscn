@@ -1,16 +1,19 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Pruebas/Escenario.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Jugador/PrimeraPersona.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Objetos/Trampa.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Pruebas/Spatial.gd" type="Script" id=4]
+[ext_resource path="res://Imagenes/SkyBoxGrande.jpg" type="Texture" id=5]
 
 [sub_resource type="PanoramaSky" id=1]
+radiance_size = 4
+panorama = ExtResource( 5 )
 
 [sub_resource type="Environment" id=2]
 background_mode = 2
 background_sky = SubResource( 1 )
-background_energy = 0.11
+background_sky_orientation = Basis( 1, 0, 0, 0, -0.573576, -0.819152, 0, 0.819152, -0.573576 )
 ambient_light_color = Color( 0.623529, 0.623529, 0.623529, 1 )
 ambient_light_energy = 0.01
 ambient_light_sky_contribution = 0.0
@@ -23,7 +26,6 @@ auto_exposure_enabled = true
 auto_exposure_scale = 0.05
 auto_exposure_max_luma = 0.18
 ssao_enabled = true
-dof_blur_far_enabled = true
 dof_blur_far_distance = 28.84
 dof_blur_near_enabled = true
 dof_blur_near_distance = 0.97
