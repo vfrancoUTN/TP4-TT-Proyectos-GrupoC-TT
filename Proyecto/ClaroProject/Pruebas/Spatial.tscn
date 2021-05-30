@@ -1,8 +1,7 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Pruebas/Escenario.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Jugador/PrimeraPersona.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Objetos/CoinGold.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Pruebas/Spatial.gd" type="Script" id=4]
 
 [sub_resource type="PanoramaSky" id=1]
@@ -46,9 +45,6 @@ shadow_enabled = true
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( -0.205897, 0, 0.978574, 0, 1, 0, -0.978574, 0, -0.205897, 3.37259, -9.66808, 23.2591 )
-
-[node name="CoinGold" parent="." instance=ExtResource( 3 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.64467, -10.0635, 23.9133 )
 
 [node name="PrimeraPersona" parent="." instance=ExtResource( 2 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4288, -9.14147, 16.4251 )

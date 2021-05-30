@@ -35,5 +35,12 @@ func _physics_process(delta):
 	velocidad.z = velocidadDeseada.z
 	velocidad = move_and_slide(velocidad, Vector3.UP, true)
 	
+func morir():
+	get_tree().change_scene("moriste")
 	
+func ganar():
+	get_tree().change_scene("ganaste")
+	
+func pausa():
+	get_tree().change_scene("Menu pausa?") #Esta logica no va a funcionar, un set visible mejor
 	
