@@ -1,0 +1,81 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Imagenes/PantallaMuerte.jpg" type="Texture" id=1]
+[ext_resource path="res://Fuentes/remnant/Remnant-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Interfaz/PantallaInicio.gd" type="Script" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="PantallaInicio" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.513726, 0.513726, 0.513726, 1 )
+self_modulate = Color( 0.815686, 0.815686, 0.815686, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -98.0
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 1 )
+text = "Claro"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ToolButton" type="ToolButton" parent="."]
+anchor_left = 0.481
+anchor_top = 0.652
+anchor_right = 0.481
+anchor_bottom = 0.652
+margin_left = -317.428
+margin_top = -78.7057
+margin_right = 379.572
+margin_bottom = 17.2943
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="ToolButton"]
+anchor_right = 0.994
+anchor_bottom = 0.635
+margin_right = -0.817993
+margin_bottom = 0.0399933
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="ToolButton/CenterContainer"]
+margin_right = 693.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 2 )
+text = "Comenzar intento"
+align = 1
