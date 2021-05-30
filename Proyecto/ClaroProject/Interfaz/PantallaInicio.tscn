@@ -106,9 +106,8 @@ __meta__ = {
 
 [node name="Label" type="Label" parent="Salir/CenterContainer"]
 margin_left = 242.0
-margin_top = 32.0
 margin_right = 449.0
-margin_bottom = 93.0
+margin_bottom = 61.0
 custom_fonts/font = SubResource( 2 )
 text = "Salir"
 align = 1
