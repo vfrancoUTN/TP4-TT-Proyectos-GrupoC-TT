@@ -31,16 +31,26 @@ func _unhandled_input(event):
 
 func _physics_process(delta):
 	velocidad.y += gravedad * delta
+	procesarMovimiento()
+	animarCamara()
+
+func procesarMovimiento():
 	var velocidadDeseada = recibirControles() * velocidadMaxima
-	if Input.is_action_pressed("Correr"):
-		velocidadDeseada = velocidadDeseada * aceleracion
-	else:
-		velocidadDeseada = recibirControles() * velocidadMaxima
+	
+	velocidadDeseada = correr(velocidadDeseada)
 	
 	velocidad.x = velocidadDeseada.x
 	velocidad.z = velocidadDeseada.z
 	velocidad = move_and_slide(velocidad, Vector3.UP, true)
 	
+func correr(velocidadDeseada):
+	if Input.is_action_pressed("Correr"):
+		velocidadDeseada = velocidadDeseada * aceleracion
+	else:
+		velocidadDeseada = recibirControles() * velocidadMaxima
+	return velocidadDeseada
+	
+func animarCamara():
 	if velocidad != Vector3():
 		animacionCamara.play("MovimientoCabeza")
 	
