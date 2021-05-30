@@ -36,7 +36,7 @@ func _physics_process(delta):
 	velocidad = move_and_slide(velocidad, Vector3.UP, true)
 	
 func morir():
-	get_tree().change_scene("moriste")
+	get_tree().change_scene("res://Interfaz/PantallaDerrota.tscn")
 	
 func ganar():
 	get_tree().change_scene("ganaste")
