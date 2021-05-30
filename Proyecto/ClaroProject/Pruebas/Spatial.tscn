@@ -26,8 +26,11 @@ ssao_enabled = true
 dof_blur_far_enabled = true
 dof_blur_far_distance = 28.84
 dof_blur_near_enabled = true
+dof_blur_near_distance = 0.97
 glow_enabled = true
+glow_bloom = 0.01
 adjustment_enabled = true
+adjustment_brightness = 0.73
 
 [node name="Spatial" type="Spatial"]
 script = ExtResource( 4 )
