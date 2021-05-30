@@ -51,7 +51,8 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ToolButton" type="ToolButton" parent="."]
+[node name="ToolButton" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.481
 anchor_top = 0.652
 anchor_right = 0.481
@@ -60,9 +61,6 @@ margin_left = -317.428
 margin_top = -78.7057
 margin_right = 379.572
 margin_bottom = 17.2943
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="CenterContainer" type="CenterContainer" parent="ToolButton"]
 anchor_right = 0.994
@@ -79,3 +77,5 @@ margin_bottom = 61.0
 custom_fonts/font = SubResource( 2 )
 text = "Comenzar intento"
 align = 1
+
+[connection signal="pressed" from="ToolButton" to="." method="_on_ToolButton_pressed"]

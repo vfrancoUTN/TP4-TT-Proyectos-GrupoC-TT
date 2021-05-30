@@ -15,7 +15,7 @@ _global_script_class_icons={
 [application]
 
 config/name="ClaroProject"
-run/main_scene="res://Pruebas/Spatial.tscn"
+run/main_scene="res://Interfaz/PantallaInicio.tscn"
 config/icon="res://icon.png"
 
 [display]
