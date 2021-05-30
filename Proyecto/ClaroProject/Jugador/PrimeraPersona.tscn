@@ -28,5 +28,6 @@ current = true
 [node name="SpotLight" type="SpotLight" parent="Pivote/Camera"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.590074, 0 )
 shadow_enabled = true
-spot_range = 8.07468
+spot_range = 9.7
+spot_attenuation = 0.5
 spot_angle = 10.1497
