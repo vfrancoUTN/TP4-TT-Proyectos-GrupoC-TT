@@ -5,13 +5,13 @@
 [ext_resource path="res://Objetos/CoinGold.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Pruebas/Spatial.gd" type="Script" id=4]
 
-[sub_resource type="PanoramaSky" id=2]
+[sub_resource type="PanoramaSky" id=1]
 
-[sub_resource type="Environment" id=1]
+[sub_resource type="Environment" id=2]
 background_mode = 2
-background_sky = SubResource( 2 )
+background_sky = SubResource( 1 )
 background_energy = 0.11
-ambient_light_color = Color( 1, 1, 1, 1 )
+ambient_light_color = Color( 0.623529, 0.623529, 0.623529, 1 )
 ambient_light_energy = 0.01
 ambient_light_sky_contribution = 0.0
 fog_enabled = true
@@ -45,7 +45,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5.64467, -10.0635, 23.9133 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4288, -9.14147, 16.4251 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = SubResource( 1 )
+environment = SubResource( 2 )
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -8.36012, -10.5222 )
