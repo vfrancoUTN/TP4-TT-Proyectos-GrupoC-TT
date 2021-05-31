@@ -194,6 +194,9 @@ transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 20.4195, 1.29349, 23.5134 )
 [node name="Llave2" parent="Llaves" instance=ExtResource( 8 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -67.4463, 1.29349, -6.49712 )
 
+[node name="Llave3" parent="Llaves" instance=ExtResource( 8 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 50.3797, 1.29349, -69.286 )
+
 [node name="Puertas" type="Node" parent="."]
 
 [node name="PuertaMock" parent="Puertas" instance=ExtResource( 9 )]
@@ -201,6 +204,12 @@ transform = Transform( 2.258, 0, 0, 0, 3.593, 0, 0, 0, 1, 1.40387, 3.48601, 36.1
 
 [node name="PuertaMock2" parent="Puertas" instance=ExtResource( 9 )]
 transform = Transform( 2.258, 0, 0, 0, 3.593, 0, 0, 0, 1, -58.8613, 3.48601, -36.975 )
+
+[node name="PuertaMock3" parent="Puertas" instance=ExtResource( 9 )]
+transform = Transform( 3.13, 0, 0, 0, 3.874, 0, 0, 0, 1, 33.1835, 3.75799, -18.412 )
+
+[node name="PuertaMock4" parent="Puertas" instance=ExtResource( 9 )]
+transform = Transform( 3.13, 0, 0, 0, 3.874, 0, 0, 0, 1, 52.8618, 3.75799, -47.6341 )
 
 [node name="Amigo" parent="." instance=ExtResource( 7 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -58.7017, 0.896078, -37.9115 )
