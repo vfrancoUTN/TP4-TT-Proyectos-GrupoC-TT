@@ -42,6 +42,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.590074, 0 )
 [node name="Camera" type="Camera" parent="Pivote"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.2, 0 )
 current = true
+far = 200.0
 
 [node name="SpotLight" type="SpotLight" parent="Pivote/Camera"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.590074, 0 )
