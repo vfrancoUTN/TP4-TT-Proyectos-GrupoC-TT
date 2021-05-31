@@ -1,5 +1,65 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=9 format=2]
 
-[ext_resource path="res://Pruebas/Spatial.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Lugares/MockupCasaDartsch.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Objetos/LuzTitilante.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Pruebas/Spatial.gd" type="Script" id=3]
+[ext_resource path="res://Objetos/Trampa.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Jugador/PrimeraPersona.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Imagenes/SkyBoxGrande.jpg" type="Texture" id=6]
 
-[node name="Spatial" instance=ExtResource( 1 )]
+[sub_resource type="PanoramaSky" id=1]
+radiance_size = 4
+panorama = ExtResource( 6 )
+
+[sub_resource type="Environment" id=2]
+background_mode = 2
+background_sky = SubResource( 1 )
+background_sky_orientation = Basis( 1, 0, 0, 0, -0.573576, -0.819152, 0, 0.819152, -0.573576 )
+ambient_light_color = Color( 0.623529, 0.623529, 0.623529, 1 )
+ambient_light_energy = 0.01
+ambient_light_sky_contribution = 0.0
+fog_enabled = true
+fog_color = Color( 0.168627, 0.176471, 0.184314, 1 )
+fog_sun_color = Color( 0.188235, 0.188235, 0.188235, 1 )
+fog_depth_begin = 1.0
+tonemap_exposure = 0.64
+auto_exposure_enabled = true
+auto_exposure_scale = 0.05
+auto_exposure_max_luma = 0.18
+ssao_enabled = true
+dof_blur_far_distance = 28.84
+dof_blur_near_enabled = true
+dof_blur_near_distance = 0.97
+glow_enabled = true
+glow_bloom = 0.01
+adjustment_enabled = true
+adjustment_brightness = 0.73
+
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 3 )
+
+[node name="DirectionalLight" type="DirectionalLight" parent="."]
+transform = Transform( 1, 0, 0, 0, -0.899672, 0.436566, 0, -0.436566, -0.899672, 0, 56.5179, 0 )
+visible = false
+layers = 4
+shadow_enabled = true
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( -0.205897, 0, 0.978574, 0, 1, 0, -0.978574, 0, -0.205897, 3.37259, -9.66808, 23.2591 )
+
+[node name="PrimeraPersona" parent="." instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 19.287, 2.20526, 51.5052 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 2 )
+
+[node name="Trampa" parent="." instance=ExtResource( 4 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 33.179, -10.6439, 16.3816 )
+
+[node name="LuzTitilante" parent="." instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -9.76181, 14.6427 )
+retraso = 0.1
+iteraciones = 10
+
+[node name="MockupCasa" parent="." instance=ExtResource( 1 )]
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
