@@ -70,6 +70,7 @@ Correr={
 3d_render/layer_3="Escenario"
 3d_physics/layer_3="Escenario"
 3d_physics/layer_4="PickUps"
+3d_physics/layer_5="Puertas"
 
 [physics]
 
