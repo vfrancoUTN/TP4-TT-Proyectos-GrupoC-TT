@@ -3,5 +3,6 @@ extends Area
 
 
 func _on_Llave_body_entered(body):
-	body.obtenerLlave()
-	queue_free()
+	if body.has_method("obtenerLlave"):
+		body.obtenerLlave()
+		queue_free()
