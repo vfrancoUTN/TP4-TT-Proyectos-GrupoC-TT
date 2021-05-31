@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Imagenes/SkyBoxGrande.jpg" type="Texture" id=1]
 [ext_resource path="res://Pruebas/Spatial.gd" type="Script" id=2]
@@ -7,6 +7,8 @@
 [ext_resource path="res://Lugares/MockupCasaDartsch.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objetos/Trampa.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objetos/Amigo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objetos/Llave.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Objetos/Puerta.tscn" type="PackedScene" id=9]
 
 [sub_resource type="PanoramaSky" id=1]
 radiance_size = 4
@@ -183,6 +185,22 @@ iteraciones = 10
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -37.3942, 2.89478, -43.7236 )
 retraso = 0.1
 iteraciones = 10
+
+[node name="Llaves" type="Node" parent="."]
+
+[node name="Llave" parent="Llaves" instance=ExtResource( 8 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 20.4195, 1.29349, 23.5134 )
+
+[node name="Llave2" parent="Llaves" instance=ExtResource( 8 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -67.4463, 1.29349, -6.49712 )
+
+[node name="Puertas" type="Node" parent="."]
+
+[node name="PuertaMock" parent="Puertas" instance=ExtResource( 9 )]
+transform = Transform( 2.258, 0, 0, 0, 3.593, 0, 0, 0, 1, 1.40387, 3.48601, 36.1048 )
+
+[node name="PuertaMock2" parent="Puertas" instance=ExtResource( 9 )]
+transform = Transform( 2.258, 0, 0, 0, 3.593, 0, 0, 0, 1, -58.8613, 3.48601, -36.975 )
 
 [node name="Amigo" parent="." instance=ExtResource( 7 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -58.7017, 0.896078, -37.9115 )
