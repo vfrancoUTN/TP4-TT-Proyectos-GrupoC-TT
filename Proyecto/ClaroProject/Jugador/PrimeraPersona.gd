@@ -10,6 +10,8 @@ var sensibilidadMouse = 0.002 #medido en radianes por pixel
 
 var velocidad = Vector3()
 
+var llaves = 0
+
 func recibirControles():
 	var direccionControl = Vector3()
 	if Input.is_action_pressed("Adelante"):
@@ -65,7 +67,16 @@ func ganar():
 			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 			get_tree().set_input_as_handled()
 	get_tree().change_scene("res://Interfaz/PantallaVictoria.tscn")
+
+func obtenerLlave():
+	llaves += 1
 	
+func perderLlave():
+	llaves -= 1
+	
+func getLlaves():
+	return llaves
+
 func pausa():
 	get_tree().change_scene("Menu pausa?") #Esta logica no va a funcionar, un set visible mejor
 	
