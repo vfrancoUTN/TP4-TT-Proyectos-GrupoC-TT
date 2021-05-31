@@ -61,7 +61,10 @@ func morir():
 	get_tree().change_scene("res://Interfaz/PantallaDerrota.tscn")
 	
 func ganar():
-	get_tree().change_scene("ganaste")
+	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+			get_tree().set_input_as_handled()
+	get_tree().change_scene("res://Interfaz/PantallaVictoria.tscn")
 	
 func pausa():
 	get_tree().change_scene("Menu pausa?") #Esta logica no va a funcionar, un set visible mejor
