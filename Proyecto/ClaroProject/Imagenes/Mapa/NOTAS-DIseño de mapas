@@ -7,12 +7,6 @@ CONTENIDO
 Mapa_J2_D1 : Mapa que ve el J2
 Mapa_Di_D1 : Mapa para el diseño del nivel
 
-Iconos: 
-! (Verde): Llave
-J2(Celes): Jugador 2
-J1(Viole): JUgador 1
-X (Rojo ): Trampa
-| (Amari): Puertas Bloqueadas
-O (Negro): Llave para abrir habitacion J2
+Iconos: Llave,J2,J1,Trampa,Puertas Bloqueadas.
 
 
