@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Modelos/Material_001.material" type="Material" id=1]
+[ext_resource path="res://Objetos/Puerta2.gd" type="Script" id=2]
+
+[sub_resource type="CubeMesh" id=1]
+
+[sub_resource type="Skin" id=2]
+
+[sub_resource type="BoxShape" id=3]
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1.15019, 1.12366, 1.2263 )
+
+[node name="PuertaMock" type="StaticBody"]
+collision_layer = 16
+script = ExtResource( 2 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+layers = 16
+mesh = SubResource( 1 )
+skin = SubResource( 2 )
+material/0 = ExtResource( 1 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 4 )
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

@@ -10,6 +10,7 @@ config_version=4
 
 _global_script_classes=[  ]
 _global_script_class_icons={
+
 }
 
 [application]
@@ -70,6 +71,7 @@ Correr={
 3d_render/layer_3="Escenario"
 3d_physics/layer_3="Escenario"
 3d_physics/layer_4="PickUps"
+3d_physics/layer_5="Puertas"
 
 [physics]
 
