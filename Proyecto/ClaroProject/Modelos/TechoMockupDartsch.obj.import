@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/TechoMockupDartsch.obj-f5383ffb24a0c6532e1bea37e5eeed12.mesh"
+
+[deps]
+
+files=[ "res://.import/TechoMockupDartsch.obj-f5383ffb24a0c6532e1bea37e5eeed12.mesh" ]
+
+source_file="res://Modelos/TechoMockupDartsch.obj"
+dest_files=[ "res://.import/TechoMockupDartsch.obj-f5383ffb24a0c6532e1bea37e5eeed12.mesh", "res://.import/TechoMockupDartsch.obj-f5383ffb24a0c6532e1bea37e5eeed12.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

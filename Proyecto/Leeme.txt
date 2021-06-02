@@ -22,7 +22,7 @@ El jugador 2 en cambio, se encuentra atrapado en una habitación sellada y debe 
 cuenta con un mapa de la casa y la ubicación de las trampas y detalles sobre
 cómo resolver los acertijos. Como desventaja, este jugador 2 no puede ver nada de la
 casa ni de los acertijos, depende de la explicación del jugador para darle información correcta.
------------------
+------------------
 Tecnología:
 El lenguaje de programación a utilizar será GDScript.
 Como entorno de desarrollo, utilizaremos Godot Engine 3.3.2.
