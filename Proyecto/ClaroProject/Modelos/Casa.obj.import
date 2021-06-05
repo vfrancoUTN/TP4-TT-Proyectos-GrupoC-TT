@@ -2,14 +2,14 @@
 
 importer="wavefront_obj"
 type="Mesh"
-path="res://.import/Casa.obj-17856bc49a56808f1d20d7f0a7605d88.mesh"
+path="res://.import/Casa.obj-9354e7fe680590f14f7a1edec87df405.mesh"
 
 [deps]
 
-files=[ "res://.import/Casa.obj-17856bc49a56808f1d20d7f0a7605d88.mesh" ]
+files=[ "res://.import/Casa.obj-9354e7fe680590f14f7a1edec87df405.mesh" ]
 
-source_file="res://Casa.obj"
-dest_files=[ "res://.import/Casa.obj-17856bc49a56808f1d20d7f0a7605d88.mesh", "res://.import/Casa.obj-17856bc49a56808f1d20d7f0a7605d88.mesh" ]
+source_file="res://Modelos/Casa.obj"
+dest_files=[ "res://.import/Casa.obj-9354e7fe680590f14f7a1edec87df405.mesh", "res://.import/Casa.obj-9354e7fe680590f14f7a1edec87df405.mesh" ]
 
 [params]
 

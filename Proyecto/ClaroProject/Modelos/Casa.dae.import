@@ -2,12 +2,12 @@
 
 importer="scene"
 type="PackedScene"
-path="res://.import/Casa.dae-bb4b019a938c778d12e055ada383086b.scn"
+path="res://.import/Casa.dae-c2dad15dd25aa37340cc16b6ab2d2110.scn"
 
 [deps]
 
-source_file="res://Casa.dae"
-dest_files=[ "res://.import/Casa.dae-bb4b019a938c778d12e055ada383086b.scn" ]
+source_file="res://Modelos/Casa.dae"
+dest_files=[ "res://.import/Casa.dae-c2dad15dd25aa37340cc16b6ab2d2110.scn" ]
 
 [params]
 
