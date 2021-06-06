@@ -6,3 +6,6 @@
 
 [node name="Label" parent="." index="1"]
 text = "Amigo salvado"
+
+[node name="AudioStreamPlayer" parent="." index="4"]
+autoplay = true

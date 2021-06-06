@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://Imagenes/SkyBoxGrande.jpg" type="Texture" id=1]
 [ext_resource path="res://Pruebas/Spatial.gd" type="Script" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://Objetos/Puerta.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Jugador/Enemigo.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objetos/Escondite.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Sonidos/Ambient_Horror.mp3" type="AudioStream" id=12]
+[ext_resource path="res://Sonidos/Puerta 2.ogg" type="AudioStream" id=13]
+[ext_resource path="res://Sonidos/Agarra Llave.ogg" type="AudioStream" id=14]
 
 [sub_resource type="PanoramaSky" id=1]
 radiance_size = 4
@@ -22,7 +25,7 @@ background_sky = SubResource( 1 )
 background_sky_orientation = Basis( 1, 0, 0, 0, -0.573576, -0.819152, 0, 0.819152, -0.573576 )
 background_energy = 0.17
 ambient_light_color = Color( 0.623529, 0.623529, 0.623529, 1 )
-ambient_light_energy = 0.01
+ambient_light_energy = 0.02
 ambient_light_sky_contribution = 0.0
 fog_enabled = true
 fog_color = Color( 0.168627, 0.176471, 0.184314, 1 )
@@ -66,7 +69,7 @@ transform = Transform( -0.205897, 0, 0.978574, 0, 1, 0, -0.978574, 0, -0.205897,
 [node name="PrimeraPersona" parent="." groups=[
 "Jugador",
 ] instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20.8664, 2.20526, 7.65882 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3681, 2.20526, 49.3086 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 2 )
@@ -270,3 +273,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1304, 50, 5.41653 )
 
 [node name="Position3D4" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1824, 50, 6.94945 )
+
+[node name="Sonidos" type="Node" parent="."]
+
+[node name="SonidoAmbiental" type="AudioStreamPlayer" parent="Sonidos"]
+stream = ExtResource( 12 )
+volume_db = -20.0
+autoplay = true
+
+[node name="Puerta" type="AudioStreamPlayer" parent="Sonidos"]
+stream = ExtResource( 13 )
+
+[node name="Llave" type="AudioStreamPlayer" parent="Sonidos"]
+stream = ExtResource( 14 )

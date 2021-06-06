@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Puerta 2.ogg-ffa21333b0a99c007286c02c35c923b0.oggstr
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0

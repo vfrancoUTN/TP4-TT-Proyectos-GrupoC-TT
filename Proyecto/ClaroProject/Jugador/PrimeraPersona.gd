@@ -36,7 +36,9 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	velocidad.y += gravedad * delta
 	procesarMovimiento()
+	interruptorLinterna()
 	animarCamara()
+	sonidoPisadas()
 
 func procesarMovimiento():
 	var velocidadDeseada = recibirControles() * velocidadMaxima
@@ -47,18 +49,34 @@ func procesarMovimiento():
 	velocidad.z = velocidadDeseada.z
 	velocidad = move_and_slide(velocidad, Vector3.UP, true)
 	
+	
 func correr(velocidadDeseada):
 	if Input.is_action_pressed("Correr"):
 		velocidadDeseada = velocidadDeseada * aceleracion
 	else:
 		velocidadDeseada = recibirControles() * velocidadMaxima
 	return velocidadDeseada
+
+func interruptorLinterna():
+	if Input.is_action_just_pressed("Linterna"):
+		if $Pivote/Camera/SpotLight.light_energy == 0:
+			$Pivote/Camera/SpotLight.light_energy = 1
+		else:
+			$Pivote/Camera/SpotLight.light_energy = 0
+		
 	
 func animarCamara():
 	if velocidad != Vector3():
 		animacionCamara.play("MovimientoCabeza")
 	else:
 		animacionCamara.stop()
+		
+func sonidoPisadas():
+	if velocidad != Vector3():
+		if $Pisadas.playing == false:
+			$Pisadas.playing = true
+	else:
+		$Pisadas.playing = false
 	
 func morir():
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -92,3 +110,9 @@ func desactivarEscondite():
 	
 func getEscondido():
 	return escondido
+	
+func activarRespiracion():
+	$Respiracion.play()
+	
+func desactivarRespiracion():
+	$Respiracion.stop()

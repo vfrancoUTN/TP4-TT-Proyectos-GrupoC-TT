@@ -11,5 +11,5 @@ dest_files=[ "res://.import/Agarra Llave.ogg-d7b2365dd826d9c740018a86558232d5.og
 
 [params]
 
-loop=true
+loop=false
 loop_offset=0
