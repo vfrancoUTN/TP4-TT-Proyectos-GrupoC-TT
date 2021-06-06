@@ -45,8 +45,16 @@ func patrullar(delta):
 func perseguir(delta):
 	var dj = global_transform.origin.distance_to(jugador.global_transform.origin)
 	if dj < distanciaPerseguidor:
-		global_transform.origin = global_transform.origin.linear_interpolate(jugador.global_transform.origin, (velocidad*delta)/dj)
+		if jugador.getEscondido() == false:
+			global_transform.origin = global_transform.origin.linear_interpolate(jugador.global_transform.origin, (velocidad*delta)/dj)
+		else:
+			patrullar(delta)
 	else:
 		patrullar(delta)
 
 
+
+
+func _on_Area_body_entered(body):
+	if body.has_method("morir"):
+		body.morir()

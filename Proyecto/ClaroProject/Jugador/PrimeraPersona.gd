@@ -12,6 +12,8 @@ var velocidad = Vector3()
 
 var llaves = 0
 
+var escondido = false
+
 func recibirControles():
 	var direccionControl = Vector3()
 	if Input.is_action_pressed("Adelante"):
@@ -81,4 +83,12 @@ func getLlaves():
 
 func pausa():
 	get_tree().change_scene("Menu pausa?") #Esta logica no va a funcionar, un set visible mejor
+
+func activarEscondite():
+	escondido = true
 	
+func desactivarEscondite():
+	escondido = false
+	
+func getEscondido():
+	return escondido
