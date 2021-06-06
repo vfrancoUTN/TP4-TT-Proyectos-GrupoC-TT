@@ -1,8 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Jugador/PrimeraPersona.gd" type="Script" id=1]
 [ext_resource path="res://Sonidos/Pisadas_Jugador.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Sonidos/Respiracion Jugador.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Jugador/Inventario.gd" type="Script" id=4]
+[ext_resource path="res://Jugador/Stats.gd" type="Script" id=5]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.5
@@ -56,9 +58,21 @@ spot_angle = 10.1497
 [node name="AnimationPlayer" type="AnimationPlayer" parent="Pivote/Camera"]
 anims/MovimientoCabeza = SubResource( 3 )
 
-[node name="Pisadas" type="AudioStreamPlayer3D" parent="."]
-stream = ExtResource( 2 )
-unit_db = -10.0
+[node name="Sonidos" type="Node" parent="."]
 
-[node name="Respiracion" type="AudioStreamPlayer3D" parent="."]
+[node name="Pisadas" type="AudioStreamPlayer" parent="Sonidos"]
+stream = ExtResource( 2 )
+
+[node name="Respiracion" type="AudioStreamPlayer" parent="Sonidos"]
 stream = ExtResource( 3 )
+
+[node name="Inventario" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="Stats" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="Timer" type="Timer" parent="Stats"]
+autostart = true
+
+[connection signal="timeout" from="Stats/Timer" to="Stats" method="_on_Timer_timeout"]
