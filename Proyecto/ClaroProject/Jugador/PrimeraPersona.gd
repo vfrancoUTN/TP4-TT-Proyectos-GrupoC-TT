@@ -38,6 +38,7 @@ func _physics_process(delta):
 	procesarMovimiento()
 	interruptorLinterna()
 	animarCamara()
+	sonidoPisadas()
 
 func procesarMovimiento():
 	var velocidadDeseada = recibirControles() * velocidadMaxima
@@ -47,6 +48,7 @@ func procesarMovimiento():
 	velocidad.x = velocidadDeseada.x
 	velocidad.z = velocidadDeseada.z
 	velocidad = move_and_slide(velocidad, Vector3.UP, true)
+	
 	
 func correr(velocidadDeseada):
 	if Input.is_action_pressed("Correr"):
@@ -68,6 +70,13 @@ func animarCamara():
 		animacionCamara.play("MovimientoCabeza")
 	else:
 		animacionCamara.stop()
+		
+func sonidoPisadas():
+	if velocidad != Vector3():
+		if $Pisadas.playing == false:
+			$Pisadas.playing = true
+	else:
+		$Pisadas.playing = false
 	
 func morir():
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -101,3 +110,9 @@ func desactivarEscondite():
 	
 func getEscondido():
 	return escondido
+	
+func activarRespiracion():
+	$Respiracion.play()
+	
+func desactivarRespiracion():
+	$Respiracion.stop()
