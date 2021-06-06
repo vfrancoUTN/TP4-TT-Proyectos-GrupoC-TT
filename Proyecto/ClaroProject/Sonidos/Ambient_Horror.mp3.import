@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ambient_Horror.mp3-cff1daf2f62f31e6d7f03e6ca8a17de2.mp3str"
+
+[deps]
+
+source_file="res://Sonidos/Ambient_Horror.mp3"
+dest_files=[ "res://.import/Ambient_Horror.mp3-cff1daf2f62f31e6d7f03e6ca8a17de2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
