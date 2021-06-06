@@ -36,6 +36,7 @@ func _unhandled_input(event):
 func _physics_process(delta):
 	velocidad.y += gravedad * delta
 	procesarMovimiento()
+	interruptorLinterna()
 	animarCamara()
 
 func procesarMovimiento():
@@ -53,6 +54,14 @@ func correr(velocidadDeseada):
 	else:
 		velocidadDeseada = recibirControles() * velocidadMaxima
 	return velocidadDeseada
+
+func interruptorLinterna():
+	if Input.is_action_just_pressed("Linterna"):
+		if $Pivote/Camera/SpotLight.light_energy == 0:
+			$Pivote/Camera/SpotLight.light_energy = 1
+		else:
+			$Pivote/Camera/SpotLight.light_energy = 0
+		
 	
 func animarCamara():
 	if velocidad != Vector3():
