@@ -10,8 +10,6 @@ var sensibilidadMouse = 0.002 #medido en radianes por pixel
 
 var velocidad = Vector3()
 
-var llaves = 0
-
 var escondido = false
 
 func recibirControles():
@@ -73,10 +71,10 @@ func animarCamara():
 		
 func sonidoPisadas():
 	if velocidad != Vector3():
-		if $Pisadas.playing == false:
-			$Pisadas.playing = true
+		if $Sonidos/Pisadas.playing == false:
+			$Sonidos/Pisadas.playing = true
 	else:
-		$Pisadas.playing = false
+		$Sonidos/Pisadas.playing = false
 	
 func morir():
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -91,13 +89,17 @@ func ganar():
 	get_tree().change_scene("res://Interfaz/PantallaVictoria.tscn")
 
 func obtenerLlave():
-	llaves += 1
+	var llavesActuales = $Inventario.getLlaves()
+	var nuevaCantidadLlaves = llavesActuales + 1
+	$Inventario.setLlaves(nuevaCantidadLlaves)
 	
 func perderLlave():
-	llaves -= 1
+	var llavesActuales = $Inventario.getLlaves()
+	var nuevaCantidadLlaves = llavesActuales - 1
+	$Inventario.setLlaves(nuevaCantidadLlaves)
 	
-func getLlaves():
-	return llaves
+func chequearLlaves():
+	return $Inventario.getLlaves()
 
 func pausa():
 	get_tree().change_scene("Menu pausa?") #Esta logica no va a funcionar, un set visible mejor
@@ -112,7 +114,7 @@ func getEscondido():
 	return escondido
 	
 func activarRespiracion():
-	$Respiracion.play()
+	$Sonidos/Respiracion.play()
 	
 func desactivarRespiracion():
-	$Respiracion.stop()
+	$Sonidos/Respiracion.stop()
