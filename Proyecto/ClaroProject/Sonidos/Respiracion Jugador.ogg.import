@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Respiracion Jugador.ogg-dad257562fa71cffe814c42ba74a67b6.oggstr"
+
+[deps]
+
+source_file="res://Sonidos/Respiracion Jugador.ogg"
+dest_files=[ "res://.import/Respiracion Jugador.ogg-dad257562fa71cffe814c42ba74a67b6.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

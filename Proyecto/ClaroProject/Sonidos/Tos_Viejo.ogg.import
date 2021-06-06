@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Tos_Viejo.ogg-23a3987adfb0f99c5b03858c5c8b0408.oggstr"
+
+[deps]
+
+source_file="res://Sonidos/Tos_Viejo.ogg"
+dest_files=[ "res://.import/Tos_Viejo.ogg-23a3987adfb0f99c5b03858c5c8b0408.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

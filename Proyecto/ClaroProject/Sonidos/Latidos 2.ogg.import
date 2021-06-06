@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Latidos 2.ogg-4f520b45a2f841b1488eb8e0ff79d05d.oggstr"
+
+[deps]
+
+source_file="res://Sonidos/Latidos 2.ogg"
+dest_files=[ "res://.import/Latidos 2.ogg-4f520b45a2f841b1488eb8e0ff79d05d.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Pisadas_Jugador.ogg-fe0ad76362602e47bf080e1f85ad9ef2.oggstr"
+
+[deps]
+
+source_file="res://Sonidos/Pisadas_Jugador.ogg"
+dest_files=[ "res://.import/Pisadas_Jugador.ogg-fe0ad76362602e47bf080e1f85ad9ef2.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

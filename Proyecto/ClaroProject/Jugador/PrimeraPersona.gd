@@ -12,6 +12,8 @@ var velocidad = Vector3()
 
 var llaves = 0
 
+var escondido = false
+
 func recibirControles():
 	var direccionControl = Vector3()
 	if Input.is_action_pressed("Adelante"):
@@ -55,6 +57,8 @@ func correr(velocidadDeseada):
 func animarCamara():
 	if velocidad != Vector3():
 		animacionCamara.play("MovimientoCabeza")
+	else:
+		animacionCamara.stop()
 	
 func morir():
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -79,4 +83,12 @@ func getLlaves():
 
 func pausa():
 	get_tree().change_scene("Menu pausa?") #Esta logica no va a funcionar, un set visible mejor
+
+func activarEscondite():
+	escondido = true
 	
+func desactivarEscondite():
+	escondido = false
+	
+func getEscondido():
+	return escondido

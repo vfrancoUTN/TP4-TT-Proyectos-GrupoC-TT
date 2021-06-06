@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Agarra Llave.ogg-d7b2365dd826d9c740018a86558232d5.oggstr"
+
+[deps]
+
+source_file="res://Sonidos/Agarra Llave.ogg"
+dest_files=[ "res://.import/Agarra Llave.ogg-d7b2365dd826d9c740018a86558232d5.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0

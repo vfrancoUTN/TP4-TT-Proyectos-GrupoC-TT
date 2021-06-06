@@ -71,6 +71,9 @@ Correr={
 3d_physics/layer_3="Escenario"
 3d_physics/layer_4="PickUps"
 3d_physics/layer_5="Puertas"
+3d_physics/layer_6="Enemigo"
+3d_physics/layer_7="Navegacion"
+3d_physics/layer_8="Escondite"
 
 [physics]
 
