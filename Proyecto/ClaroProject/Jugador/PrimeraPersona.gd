@@ -55,6 +55,8 @@ func correr(velocidadDeseada):
 func animarCamara():
 	if velocidad != Vector3():
 		animacionCamara.play("MovimientoCabeza")
+	else:
+		animacionCamara.stop()
 	
 func morir():
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
