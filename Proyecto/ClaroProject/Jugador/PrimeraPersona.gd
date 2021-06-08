@@ -2,6 +2,11 @@ extends KinematicBody
 
 onready var camara = $Pivote/Camera
 onready var animacionCamara = $Pivote/Camera/AnimationPlayer
+onready var pivote = $Pivote
+onready var linterna = $Pivote/Camera/SpotLight
+onready var pisadas = $Sonidos/Pisadas
+onready var inventario = $Inventario
+onready var respiracion = $Sonidos/Respiracion
 
 var gravedad = -30
 export var velocidadMaxima = 5
@@ -11,6 +16,10 @@ var sensibilidadMouse = 0.002 #medido en radianes por pixel
 var velocidad = Vector3()
 
 var escondido = false
+var pausa = false
+
+func _ready():
+	set_physics_process(true)
 
 func recibirControles():
 	var direccionControl = Vector3()
@@ -28,15 +37,16 @@ func recibirControles():
 func _unhandled_input(event):
 	if event is InputEventMouseMotion and Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
 		rotate_y(-event.relative.x * sensibilidadMouse)
-		$Pivote.rotate_x(-event.relative.y * sensibilidadMouse)
-		$Pivote.rotation.x = clamp($Pivote.rotation.x, -1.2, 1.2)
+		pivote.rotate_x(-event.relative.y * sensibilidadMouse)
+		pivote.rotation.x = clamp(pivote.rotation.x, -1.2, 1.2)
 
 func _physics_process(delta):
-	velocidad.y += gravedad * delta
-	procesarMovimiento()
-	interruptorLinterna()
-	animarCamara()
-	sonidoPisadas()
+	if pausa == false: 
+		velocidad.y += gravedad * delta
+		procesarMovimiento()
+		interruptorLinterna()
+		animarCamara()
+		sonidoPisadas()
 
 func procesarMovimiento():
 	var velocidadDeseada = recibirControles() * velocidadMaxima
@@ -57,10 +67,10 @@ func correr(velocidadDeseada):
 
 func interruptorLinterna():
 	if Input.is_action_just_pressed("Linterna"):
-		if $Pivote/Camera/SpotLight.light_energy == 0:
-			$Pivote/Camera/SpotLight.light_energy = 1
+		if linterna.light_energy == 0:
+			linterna.light_energy = 1
 		else:
-			$Pivote/Camera/SpotLight.light_energy = 0
+			linterna.light_energy = 0
 		
 	
 func animarCamara():
@@ -71,10 +81,10 @@ func animarCamara():
 		
 func sonidoPisadas():
 	if velocidad != Vector3():
-		if $Sonidos/Pisadas.playing == false:
-			$Sonidos/Pisadas.playing = true
+		if pisadas.playing == false:
+			pisadas.playing = true
 	else:
-		$Sonidos/Pisadas.playing = false
+		pisadas.playing = false
 	
 func morir():
 	if Input.get_mouse_mode() == Input.MOUSE_MODE_CAPTURED:
@@ -89,17 +99,17 @@ func ganar():
 	get_tree().change_scene("res://Interfaz/PantallaVictoria.tscn")
 
 func obtenerLlave():
-	var llavesActuales = $Inventario.getLlaves()
+	var llavesActuales = inventario.getLlaves()
 	var nuevaCantidadLlaves = llavesActuales + 1
-	$Inventario.setLlaves(nuevaCantidadLlaves)
+	inventario.setLlaves(nuevaCantidadLlaves)
 	
 func perderLlave():
-	var llavesActuales = $Inventario.getLlaves()
+	var llavesActuales = inventario.getLlaves()
 	var nuevaCantidadLlaves = llavesActuales - 1
-	$Inventario.setLlaves(nuevaCantidadLlaves)
+	inventario.setLlaves(nuevaCantidadLlaves)
 	
 func chequearLlaves():
-	return $Inventario.getLlaves()
+	return inventario.getLlaves()
 
 func pausa():
 	get_tree().change_scene("Menu pausa?") #Esta logica no va a funcionar, un set visible mejor
@@ -114,7 +124,15 @@ func getEscondido():
 	return escondido
 	
 func activarRespiracion():
-	$Sonidos/Respiracion.play()
+	respiracion.play()
 	
 func desactivarRespiracion():
-	$Sonidos/Respiracion.stop()
+	respiracion.stop()
+	
+func activarPausa():
+	if pausa == false:
+		pausa = true
+	
+func desactivarPausa():
+	if pausa == true:
+		pausa = false
