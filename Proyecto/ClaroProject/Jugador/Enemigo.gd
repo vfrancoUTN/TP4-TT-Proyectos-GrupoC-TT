@@ -2,6 +2,7 @@ extends KinematicBody
 
 export (float) var velocidad
 export (int) var distanciaPerseguidor = 10
+onready var pisadas = $Pisadas
 var posObjetivo = Vector3()
 var navegacion = Navigation
 var puntosLlegada = PoolVector3Array()
@@ -61,10 +62,10 @@ func perseguir(delta):
 
 func sonidoPisadas():
 	if moviendose == true:
-		if $Pisadas.playing == false:
-			$Pisadas.playing = true
+		if pisadas.playing == false:
+			pisadas.playing = true
 	else:
-		$Pisadas.playing = false
+		pisadas.playing = false
 
 func _on_Area_body_entered(body):
 	if body.has_method("morir"):
