@@ -2,10 +2,13 @@ extends Control
 
 onready var tiempoLabel : = $CenterContainer/VBoxContainer/Tiempo
 onready var jugador
+onready var volumen = get_node("OpcionesVisuales/CenterContainer/VBoxContainer/Volumen/BarraVolumen")
 
 var menuActivo = false
 
 func _ready():
+	var volumenSet = volumen.value
+	AudioServer.set_bus_volume_db(AudioServer.get_bus_index("Master"), volumenSet)
 	jugador = get_tree().get_nodes_in_group("Jugador")[0]
 	hide()
 

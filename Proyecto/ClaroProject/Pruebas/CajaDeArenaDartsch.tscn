@@ -72,7 +72,9 @@ transform = Transform( -0.205897, 0, 0.978574, 0, 1, 0, -0.978574, 0, -0.205897,
 ] instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3681, 2.20526, 49.3086 )
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." groups=[
+"EfectosVisuales",
+]]
 environment = SubResource( 2 )
 
 [node name="MockupCasa" parent="." instance=ExtResource( 5 )]
