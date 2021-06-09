@@ -7,6 +7,8 @@ onready var linterna = $Pivote/Camera/SpotLight
 onready var pisadas = $Sonidos/Pisadas
 onready var inventario = $Inventario
 onready var respiracion = $Sonidos/Respiracion
+onready var textoPopup = $Control/CenterContainer/Label
+onready var popup = $Control
 
 var gravedad = -30
 export var velocidadMaxima = 5
@@ -20,6 +22,7 @@ var pausa = false
 
 func _ready():
 	set_physics_process(true)
+	popup.hide()
 
 func recibirControles():
 	var direccionControl = Vector3()
@@ -136,3 +139,22 @@ func activarPausa():
 func desactivarPausa():
 	if pausa == true:
 		pausa = false
+
+func getPopup():
+	return popup
+
+func getTextoPopup():
+	return textoPopup
+
+func cerrarPanel():
+	if popup.visible == true:
+			popup.visible == false
+			
+func popupNota():
+	textoPopup.text = "Presiona E para agarrarla nota"
+	popup.show()
+
+func popupPuerta():
+	textoPopup.text = "Si tenes la llave, podras pasar por la puerta"
+	popup.show()
+	

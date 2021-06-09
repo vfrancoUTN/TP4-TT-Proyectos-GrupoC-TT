@@ -291,3 +291,4 @@ stream = ExtResource( 13 )
 stream = ExtResource( 14 )
 
 [node name="GUI" parent="." instance=ExtResource( 15 )]
+visible = false
