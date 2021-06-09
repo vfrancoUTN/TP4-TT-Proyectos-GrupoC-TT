@@ -154,8 +154,9 @@ func cerrarPanel():
 		popup.hide()
 			
 func popupNota():
-	textoPopup.text = "Presiona E para agarrarla nota"
-	popup.show()
+	if noMostrarUI == false:
+		textoPopup.text = "Presiona F para agarrarla nota"
+		popup.show()
 
 func popupPuerta():
 	if inventario.getLlaves() == 0:

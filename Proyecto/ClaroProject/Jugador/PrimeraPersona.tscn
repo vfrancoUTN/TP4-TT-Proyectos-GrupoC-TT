@@ -71,7 +71,6 @@ enabled = true
 exclude_parent = false
 collision_mask = 185
 collide_with_areas = true
-collide_with_bodies = false
 script = ExtResource( 6 )
 
 [node name="Sonidos" type="Node" parent="."]

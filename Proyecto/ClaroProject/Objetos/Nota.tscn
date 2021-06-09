@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://Objetos/Nota.gd" type="Script" id=1]
-[ext_resource path="res://Modelos/Material_001.material" type="Material" id=2]
+[ext_resource path="res://Modelos/gold.material" type="Material" id=2]
 [ext_resource path="res://Sonidos/Agarra Llave.ogg" type="AudioStream" id=3]
 [ext_resource path="res://Objetos/NotaInfo.gd" type="Script" id=4]
 
@@ -11,12 +11,13 @@ size = Vector3( 1, 1, 1 )
 [sub_resource type="Skin" id=2]
 
 [sub_resource type="BoxShape" id=3]
+extents = Vector3( 1.03895, 0.981095, 1.13557 )
 
 [sub_resource type="BoxShape" id=4]
-extents = Vector3( 1.15019, 1.12366, 1.2263 )
+extents = Vector3( 1.12907, 1.12366, 1.2263 )
 
 [node name="Nota" type="StaticBody" groups=[
-"Notas",
+"Notass",
 ]]
 collision_layer = 16
 script = ExtResource( 1 )
@@ -45,3 +46,4 @@ __meta__ = {
 }
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

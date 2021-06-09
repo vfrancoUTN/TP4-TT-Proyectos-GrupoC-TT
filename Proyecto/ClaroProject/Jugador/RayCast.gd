@@ -14,9 +14,9 @@ var colisionDetectada;
 func _process(delta):
 	if is_colliding():
 		colisionDetectada = get_collider().get_parent()
-		if colisionDetectada.is_in_group("Notas"):
+		if colisionDetectada.is_in_group("Notass"):
 			jugador.popupNota()
-		if colisionDetectada.is_in_group("Puertas"):
+		elif colisionDetectada.is_in_group("Puertas"):
 			jugador.popupPuerta()
 		else:
 			jugador.cerrarPanel()
