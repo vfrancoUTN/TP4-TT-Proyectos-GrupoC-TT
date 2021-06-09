@@ -13,13 +13,12 @@ var colisionDetectada;
 
 func _process(delta):
 	if is_colliding():
-		colisionDetectada = get_collider()
-		if colisionDetectada.get_node().is_in_group("Notas"):
+		colisionDetectada = get_collider().get_parent()
+		if colisionDetectada.is_in_group("Notas"):
 			jugador.popupNota()
-		if colisionDetectada.get_node().is_in_group("Puertas"):
+		if colisionDetectada.is_in_group("Puertas"):
 			jugador.popupPuerta()
 		else:
-			if popup.is_visible_in_tree() == true:
-				popup.is_visible_in_tree() == false
+			jugador.cerrarPanel()
 	else:
 		jugador.cerrarPanel()

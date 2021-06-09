@@ -68,6 +68,10 @@ anims/MovimientoCabeza = SubResource( 3 )
 [node name="RayCast" type="RayCast" parent="Pivote/Camera"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 enabled = true
+exclude_parent = false
+collision_mask = 185
+collide_with_areas = true
+collide_with_bodies = false
 script = ExtResource( 6 )
 
 [node name="Sonidos" type="Node" parent="."]
@@ -114,3 +118,4 @@ __meta__ = {
 }
 
 [connection signal="timeout" from="Stats/Timer" to="Stats" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Stats/Timer" to="." method="_on_Timer_timeout"]
