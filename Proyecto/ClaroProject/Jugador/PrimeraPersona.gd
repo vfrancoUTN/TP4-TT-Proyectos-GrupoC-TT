@@ -135,11 +135,6 @@ func activarRespiracion():
 func desactivarRespiracion():
 	respiracion.stop()
 	
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Rama-Zabala
 func activarPausa():
 	if pausa == false:
 		pausa = true
@@ -164,7 +159,6 @@ func popupNota():
 		textoPopup.text = "Presiona F para agarrarla nota"
 =======
 		textoPopup.text = "Presiona E para agarrarla nota"
->>>>>>> Rama-Zabala
 		popup.show()
 
 func popupPuerta():
