@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Fuentes/remnant/Remnant-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Pruebas/GUI.gd" type="Script" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://Interfaz/SwitchGlow.gd" type="Script" id=17]
 [ext_resource path="res://Imagenes/AtrapadoParaSiempre.jpg" type="Texture" id=18]
 [ext_resource path="res://Interfaz/OpcionesVisuales.gd" type="Script" id=19]
+[ext_resource path="res://Interfaz/NotasGUI.gd" type="Script" id=20]
 
 [sub_resource type="DynamicFont" id=1]
 size = 60
@@ -72,9 +73,9 @@ __meta__ = {
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CenterContainer"]
 margin_left = 600.0
-margin_top = 383.0
+margin_top = 333.0
 margin_right = 1319.0
-margin_bottom = 697.0
+margin_bottom = 747.0
 alignment = 1
 
 [node name="Titulo" type="Label" parent="CenterContainer/VBoxContainer"]
@@ -107,17 +108,32 @@ size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 text = "Configuraciones"
 
-[node name="Separador3" type="Label" parent="CenterContainer/VBoxContainer"]
+[node name="Separador4" type="Label" parent="CenterContainer/VBoxContainer"]
 margin_top = 218.0
 margin_right = 719.0
 margin_bottom = 267.0
 custom_fonts/font = SubResource( 2 )
 align = 1
 
-[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+[node name="BotonNotas" type="Button" parent="CenterContainer/VBoxContainer"]
 margin_top = 271.0
 margin_right = 719.0
 margin_bottom = 314.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "Notas"
+
+[node name="Separador3" type="Label" parent="CenterContainer/VBoxContainer"]
+margin_top = 318.0
+margin_right = 719.0
+margin_bottom = 367.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="CenterContainer/VBoxContainer"]
+margin_top = 371.0
+margin_right = 719.0
+margin_bottom = 414.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -264,7 +280,7 @@ size_flags_vertical = 3
 min_value = 0.01
 max_value = 2.0
 step = 0.1
-value = 0.73
+value = 0.7
 editable = false
 scrollable = false
 tick_count = 25
@@ -481,7 +497,79 @@ size_flags_horizontal = 3
 custom_fonts/font = SubResource( 3 )
 text = "Atras"
 
+[node name="NotasGUI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="NotasGUI"]
+self_modulate = Color( 0.458824, 0.454902, 0.454902, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 13.4695
+margin_top = -202.043
+margin_right = 13.4695
+margin_bottom = 234.957
+texture = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CenterContainer" type="CenterContainer" parent="NotasGUI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="NotasGUI/CenterContainer"]
+margin_left = 848.0
+margin_top = 459.0
+margin_right = 1072.0
+margin_bottom = 620.0
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Titulo2" type="Label" parent="NotasGUI/CenterContainer/VBoxContainer"]
+margin_right = 224.0
+margin_bottom = 61.0
+custom_fonts/font = SubResource( 1 )
+text = "Notas"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nota1" type="Label" parent="NotasGUI/CenterContainer/VBoxContainer"]
+margin_top = 65.0
+margin_right = 224.0
+margin_bottom = 114.0
+custom_fonts/font = SubResource( 2 )
+align = 1
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="NotasGUI/CenterContainer/VBoxContainer"]
+margin_top = 118.0
+margin_right = 224.0
+margin_bottom = 161.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonVolver" type="Button" parent="NotasGUI/CenterContainer/VBoxContainer/HBoxContainer3"]
+margin_right = 224.0
+margin_bottom = 43.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "Atras"
+
 [connection signal="pressed" from="CenterContainer/VBoxContainer/BotonConfigs" to="OpcionesVisuales" method="_on_BotonConfigs_pressed"]
+[connection signal="pressed" from="CenterContainer/VBoxContainer/BotonNotas" to="NotasGUI" method="_on_BotonNotas_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/BotonVolver" to="." method="_on_BotonVolver_pressed"]
 [connection signal="pressed" from="CenterContainer/VBoxContainer/HBoxContainer/BotonSalir" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="OpcionesVisuales/CenterContainer/VBoxContainer/HBoxContainer2/BotonVolver" to="OpcionesVisuales" method="_on_BotonVolver_pressed"]
+[connection signal="pressed" from="NotasGUI/CenterContainer/VBoxContainer/HBoxContainer3/BotonVolver" to="NotasGUI" method="_on_BotonVolver_pressed"]

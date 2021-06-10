@@ -13,7 +13,9 @@
 [sub_resource type="BoxShape" id=4]
 extents = Vector3( 1.15019, 1.12366, 1.2263 )
 
-[node name="PuertaMock" type="StaticBody"]
+[node name="PuertaMock" type="StaticBody" groups=[
+"Puertas",
+]]
 collision_layer = 16
 script = ExtResource( 2 )
 

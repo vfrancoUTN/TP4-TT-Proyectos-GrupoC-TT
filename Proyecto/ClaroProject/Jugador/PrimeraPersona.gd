@@ -7,19 +7,25 @@ onready var linterna = $Pivote/Camera/SpotLight
 onready var pisadas = $Sonidos/Pisadas
 onready var inventario = $Inventario
 onready var respiracion = $Sonidos/Respiracion
+onready var textoPopup = $Control/CenterContainer/Label
+onready var popup = $Control
+onready var temporizador = $Stats/Timer
 
 var gravedad = -30
 export var velocidadMaxima = 5
 export var aceleracion = 2
 var sensibilidadMouse = 0.002 #medido en radianes por pixel
 
+
 var velocidad = Vector3()
 
 var escondido = false
 var pausa = false
+var noMostrarUI = false
 
 func _ready():
 	set_physics_process(true)
+	popup.hide()
 
 func recibirControles():
 	var direccionControl = Vector3()
@@ -136,3 +142,42 @@ func activarPausa():
 func desactivarPausa():
 	if pausa == true:
 		pausa = false
+
+func getPopup():
+	return popup
+
+func getTextoPopup():
+	return textoPopup
+
+func cerrarPanel():
+	if popup.visible == true:
+		popup.hide()
+			
+func popupNota():
+	if noMostrarUI == false:
+		textoPopup.text = "Presiona F para agarrarla nota"
+		popup.show()
+
+func popupPuerta():
+	if inventario.getLlaves() == 0:
+		if noMostrarUI == false:
+			textoPopup.text = "Necesitas una llave para pasar por la puerta"
+			popup.show()
+
+func inhabilitarUI():
+	noMostrarUI = true
+	temporizador.start(1)
+	
+	
+func habilitarUI():
+	noMostrarUI = false
+
+
+func _on_Timer_timeout():
+	habilitarUI()
+	
+func agarrarNota(nota):
+	inventario.agregarNota(nota)
+
+func getNotas():
+	return inventario.getNotas()
