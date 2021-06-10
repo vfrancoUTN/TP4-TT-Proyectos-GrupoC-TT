@@ -155,9 +155,6 @@ func cerrarPanel():
 			
 func popupNota():
 	if noMostrarUI == false:
-<<<<<<< HEAD
-		textoPopup.text = "Presiona F para agarrarla nota"
-=======
 		textoPopup.text = "Presiona E para agarrarla nota"
 		popup.show()
 
@@ -184,7 +181,3 @@ func agarrarNota(nota):
 
 func getNotas():
 	return inventario.getNotas()
-<<<<<<< HEAD
-=======
->>>>>>> Stashed changes
->>>>>>> Rama-Zabala
