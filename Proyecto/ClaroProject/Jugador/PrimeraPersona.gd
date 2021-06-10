@@ -135,11 +135,6 @@ func activarRespiracion():
 func desactivarRespiracion():
 	respiracion.stop()
 	
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-=======
->>>>>>> Rama-Zabala
 func activarPausa():
 	if pausa == false:
 		pausa = true
@@ -161,7 +156,6 @@ func cerrarPanel():
 func popupNota():
 	if noMostrarUI == false:
 		textoPopup.text = "Presiona E para agarrarla nota"
->>>>>>> Rama-Zabala
 		popup.show()
 
 func popupPuerta():
