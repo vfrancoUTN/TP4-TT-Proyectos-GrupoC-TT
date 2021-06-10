@@ -1,6 +1,6 @@
 extends StaticBody
 
-onready var nota = $NotaInfo.notaInfo
+onready var nota : String = $NotaInfo.notaInfo
 onready var jugador
 
 var agarrable = false

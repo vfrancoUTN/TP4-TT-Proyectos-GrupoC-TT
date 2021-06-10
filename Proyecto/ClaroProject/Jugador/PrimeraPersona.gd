@@ -178,3 +178,6 @@ func _on_Timer_timeout():
 	
 func agarrarNota(nota):
 	inventario.agregarNota(nota)
+
+func getNotas():
+	return inventario.getNotas()

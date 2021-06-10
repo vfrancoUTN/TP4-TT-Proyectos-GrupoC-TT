@@ -12,5 +12,5 @@ func setLlaves(l):
 func agregarNota(nota):
 	notas.append(nota)
 	
-func mostratNota(indice):
-	return notas[indice]
+func getNotas():
+	return notas
