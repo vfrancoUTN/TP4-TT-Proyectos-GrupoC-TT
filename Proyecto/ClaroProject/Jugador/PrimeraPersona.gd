@@ -80,3 +80,52 @@ func getLlaves():
 func pausa():
 	get_tree().change_scene("Menu pausa?") #Esta logica no va a funcionar, un set visible mejor
 	
+<<<<<<< Updated upstream
+=======
+func activarPausa():
+	if pausa == false:
+		pausa = true
+	
+func desactivarPausa():
+	if pausa == true:
+		pausa = false
+
+func getPopup():
+	return popup
+
+func getTextoPopup():
+	return textoPopup
+
+func cerrarPanel():
+	if popup.visible == true:
+		popup.hide()
+			
+func popupNota():
+	if noMostrarUI == false:
+		textoPopup.text = "Presiona E para agarrarla nota"
+		popup.show()
+
+func popupPuerta():
+	if inventario.getLlaves() == 0:
+		if noMostrarUI == false:
+			textoPopup.text = "Necesitas una llave para pasar por la puerta"
+			popup.show()
+
+func inhabilitarUI():
+	noMostrarUI = true
+	temporizador.start(1)
+	
+	
+func habilitarUI():
+	noMostrarUI = false
+
+
+func _on_Timer_timeout():
+	habilitarUI()
+	
+func agarrarNota(nota):
+	inventario.agregarNota(nota)
+
+func getNotas():
+	return inventario.getNotas()
+>>>>>>> Stashed changes

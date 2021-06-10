@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Imagenes/PantallaMuerte.jpg" type="Texture" id=1]
 [ext_resource path="res://Fuentes/remnant/Remnant-Regular.ttf" type="DynamicFontData" id=2]
@@ -12,12 +12,19 @@ outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
 font_data = ExtResource( 2 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 60
-outline_size = 1
-outline_color = Color( 0, 0, 0, 1 )
-use_filter = true
-font_data = ExtResource( 2 )
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 56
+font_data = SubResource( 6 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 56
+font_data = SubResource( 7 )
 
 [node name="PantallaInicio" type="Control"]
 anchor_right = 1.0
@@ -43,8 +50,8 @@ __meta__ = {
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_top = -98.0
-margin_bottom = 37.0
+margin_top = -292.216
+margin_bottom = -157.216
 custom_fonts/font = SubResource( 1 )
 text = "Claro"
 align = 1
@@ -58,29 +65,31 @@ anchor_left = 0.481
 anchor_top = 0.652
 anchor_right = 0.481
 anchor_bottom = 0.652
-margin_left = -317.428
-margin_top = -78.7057
-margin_right = 379.572
-margin_bottom = 17.2943
+margin_left = -315.05
+margin_top = -280.049
+margin_right = 381.95
+margin_bottom = -184.049
+custom_fonts/font = SubResource( 3 )
+text = "Comenzar Intento"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="CenterContainer" type="CenterContainer" parent="ComenzarIntento"]
-anchor_right = 0.994
-anchor_bottom = 0.635
-margin_right = -0.817993
-margin_bottom = 0.0399933
+[node name="BotonOpciones" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.481
+anchor_top = 0.652
+anchor_right = 0.481
+anchor_bottom = 0.652
+margin_left = -315.05
+margin_top = -139.287
+margin_right = 381.95
+margin_bottom = -43.2868
+custom_fonts/font = SubResource( 3 )
+text = "Opciones"
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="Label" type="Label" parent="ComenzarIntento/CenterContainer"]
-margin_right = 693.0
-margin_bottom = 61.0
-custom_fonts/font = SubResource( 2 )
-text = "Comenzar intento"
-align = 1
 
 [node name="Salir" type="Button" parent="."]
 modulate = Color( 1, 1, 1, 0.498039 )
@@ -89,33 +98,19 @@ anchor_top = 0.652
 anchor_right = 0.481
 anchor_bottom = 0.652
 margin_left = -315.05
-margin_top = 42.5935
+margin_top = -0.169678
 margin_right = 381.95
-margin_bottom = 138.594
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="CenterContainer" type="CenterContainer" parent="Salir"]
-anchor_right = 0.994
-anchor_bottom = 0.635
-margin_right = -0.817993
-margin_bottom = 0.0399933
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Label" type="Label" parent="Salir/CenterContainer"]
-margin_left = 242.0
-margin_right = 449.0
-margin_bottom = 61.0
-custom_fonts/font = SubResource( 2 )
+margin_bottom = 95.8308
+custom_fonts/font = SubResource( 5 )
 text = "Salir"
-align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
 
 [connection signal="pressed" from="ComenzarIntento" to="." method="_on_ToolButton_pressed"]
+[connection signal="pressed" from="BotonOpciones" to="." method="_on_ToolButton_pressed"]
 [connection signal="pressed" from="Salir" to="." method="_on_Salir_pressed"]
