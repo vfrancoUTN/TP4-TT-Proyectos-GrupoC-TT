@@ -1,0 +1,49 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://Objetos/Nota.gd" type="Script" id=1]
+[ext_resource path="res://Modelos/gold.material" type="Material" id=2]
+[ext_resource path="res://Sonidos/Agarra Llave.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Objetos/NotaInfo.gd" type="Script" id=4]
+
+[sub_resource type="CubeMesh" id=1]
+size = Vector3( 1, 1, 1 )
+
+[sub_resource type="Skin" id=2]
+
+[sub_resource type="BoxShape" id=3]
+extents = Vector3( 1.03895, 0.981095, 1.13557 )
+
+[sub_resource type="BoxShape" id=4]
+extents = Vector3( 1.12907, 1.12366, 1.2263 )
+
+[node name="Nota" type="StaticBody" groups=[
+"Notass",
+]]
+collision_layer = 16
+script = ExtResource( 1 )
+
+[node name="MeshInstance" type="MeshInstance" parent="."]
+layers = 16
+mesh = SubResource( 1 )
+skin = SubResource( 2 )
+material/0 = ExtResource( 2 )
+
+[node name="CollisionShape" type="CollisionShape" parent="."]
+shape = SubResource( 3 )
+
+[node name="Area" type="Area" parent="."]
+
+[node name="CollisionShape" type="CollisionShape" parent="Area"]
+shape = SubResource( 4 )
+
+[node name="Sonido" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 3 )
+
+[node name="NotaInfo" type="Node" parent="."]
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": "Esta es una nota"
+}
+
+[connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
+[connection signal="body_exited" from="Area" to="." method="_on_Area_body_exited"]

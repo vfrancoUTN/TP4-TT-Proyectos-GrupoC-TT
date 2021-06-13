@@ -1,12 +1,28 @@
 extends Spatial
 
+var tiempoJuego = 0.0
+onready var menu = $GUI
+
 func _ready():
 	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 	
 func _input(event):
+	menuPausa(event)
+	recapturarMouse(event)
+
+func menuPausa(event):
 	if event.is_action_pressed("ui_cancel"):
-		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+		if menu.getActivo() == false:
+			menu.activarMenu(tiempoJuego)
+			Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+
+func recapturarMouse(event):
 	if event.is_action_pressed("Interactuar"):
-		if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
-			Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
-			get_tree().set_input_as_handled()
+		if menu.getActivo() == false:
+			if Input.get_mouse_mode() == Input.MOUSE_MODE_VISIBLE:
+				Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
+
+			
+func _process(delta):
+	tiempoJuego += delta
+

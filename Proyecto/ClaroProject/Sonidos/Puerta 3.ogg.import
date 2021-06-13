@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Puerta 3.ogg-7dbcf0b8e3eddad09eca265e2f9aa238.oggstr"
+
+[deps]
+
+source_file="res://Sonidos/Puerta 3.ogg"
+dest_files=[ "res://.import/Puerta 3.ogg-7dbcf0b8e3eddad09eca265e2f9aa238.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
