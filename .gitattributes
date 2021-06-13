@@ -11,3 +11,4 @@
 *.rar
 *.material
 *.x86_64
+*.blend1 filter=lfs diff=lfs merge=lfs -text
