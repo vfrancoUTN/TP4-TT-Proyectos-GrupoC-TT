@@ -155,7 +155,7 @@ func cerrarPanel():
 			
 func popupNota():
 	if noMostrarUI == false:
-		textoPopup.text = "Presiona F para agarrarla nota"
+		textoPopup.text = "Presiona E para agarrarla nota"
 		popup.show()
 
 func popupPuerta():
