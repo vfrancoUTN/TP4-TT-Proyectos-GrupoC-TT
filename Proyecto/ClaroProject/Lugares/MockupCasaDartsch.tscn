@@ -117,6 +117,7 @@ material/96 = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="MeshInstance2" type="MeshInstance" parent="."]
+visible = false
 layers = 4
 mesh = ExtResource( 5 )
 material/0 = ExtResource( 4 )

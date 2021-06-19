@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/CasaClaro2.obj-93a2dbed63f4eee0518a545bd290884c.mesh"
+
+[deps]
+
+files=[ "res://.import/CasaClaro2.obj-93a2dbed63f4eee0518a545bd290884c.mesh" ]
+
+source_file="res://Modelos/CasaClaro2.obj"
+dest_files=[ "res://.import/CasaClaro2.obj-93a2dbed63f4eee0518a545bd290884c.mesh", "res://.import/CasaClaro2.obj-93a2dbed63f4eee0518a545bd290884c.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
