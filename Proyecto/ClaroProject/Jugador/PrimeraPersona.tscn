@@ -37,6 +37,7 @@ use_filter = true
 font_data = ExtResource( 7 )
 
 [node name="PrimeraPersona" type="KinematicBody"]
+transform = Transform( 1, 0, 0, 0, 2, 0, 0, 0, 1, 0, 0, 0 )
 collision_mask = 30
 script = ExtResource( 1 )
 
@@ -116,5 +117,5 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="timeout" from="Stats/Timer" to="Stats" method="_on_Timer_timeout"]
 [connection signal="timeout" from="Stats/Timer" to="." method="_on_Timer_timeout"]
+[connection signal="timeout" from="Stats/Timer" to="Stats" method="_on_Timer_timeout"]

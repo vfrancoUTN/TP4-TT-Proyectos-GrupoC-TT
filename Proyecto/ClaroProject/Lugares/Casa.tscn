@@ -82,6 +82,5 @@ material/62 = ExtResource( 3 )
 shape = SubResource( 1 )
 
 [node name="Techo" type="MeshInstance" parent="."]
-visible = false
 mesh = ExtResource( 4 )
 material/0 = ExtResource( 5 )
