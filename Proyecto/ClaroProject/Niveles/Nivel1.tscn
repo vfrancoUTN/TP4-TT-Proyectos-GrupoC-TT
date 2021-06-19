@@ -228,6 +228,93 @@ transform = Transform( 4, 0, 0, 0, 4.2, 0, 0, 0, 1, 55.5835, 4.053, -51.9195 )
 [node name="Escondite" parent="Escondites" instance=ExtResource( 11 )]
 transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 20.4517, 1.68503, 7.30396 )
 
+[node name="Escondite2" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 41.1633, 1.68503, 37.3471 )
+
+[node name="Escondite3" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 50.7225, 1.68503, 51.2307 )
+
+[node name="Escondite4" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 50.9501, 1.68503, 12.3112 )
+
+[node name="Escondite5" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 75.5309, 1.68503, 50.0927 )
+
+[node name="Escondite6" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 50.2673, 1.68503, -7.94523 )
+
+[node name="Escondite7" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 5.65771, 1.68503, 38.0299 )
+
+[node name="Escondite8" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 14.9893, 1.68503, 18.0012 )
+
+[node name="Escondite9" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -41.0003, 1.68503, 18.0012 )
+
+[node name="Escondite10" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -4.58429, 1.68503, 50.7755 )
+
+[node name="Escondite11" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -51.2423, 1.68503, 50.7755 )
+
+[node name="Escondite12" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -73.3194, 1.68503, 50.5479 )
+
+[node name="Escondite13" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -73.3194, 1.68503, 6.16595 )
+
+[node name="Escondite14" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -54.8839, 1.68503, -4.75884 )
+
+[node name="Escondite15" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -46.0075, 1.68503, 7.75916 )
+
+[node name="Escondite16" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 18.6309, 1.68503, -54.148 )
+
+[node name="Escondite17" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 28.1901, 1.68503, -17.0492 )
+
+[node name="Escondite18" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 40.4805, 1.68503, -53.9204 )
+
+[node name="Escondite19" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 60.2817, 1.68503, -31.1604 )
+
+[node name="Escondite20" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 60.7369, 1.68503, -57.3344 )
+
+[node name="Escondite21" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 74.3929, 1.68503, -68.942 )
+
+[node name="Escondite22" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 40.0253, 1.68503, -69.6248 )
+
+[node name="Escondite23" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 5.4301, 1.68503, -69.8524 )
+
+[node name="Escondite24" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -19.6059, 1.68503, -64.1624 )
+
+[node name="Escondite25" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -44.8694, 1.68503, -70.7628 )
+
+[node name="Escondite26" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -45.7799, 1.68503, -45.044 )
+
+[node name="Escondite27" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -73.3194, 1.68503, -60.0656 )
+
+[node name="Escondite28" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -73.547, 1.68503, -45.044 )
+
+[node name="Escondite29" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -72.8642, 1.68503, -14.7732 )
+
+[node name="Escondite30" parent="Escondites" instance=ExtResource( 11 )]
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, -72.8642, 1.68503, -14.7732 )
+
 [node name="Notas" type="Node" parent="."]
 
 [node name="Nota" parent="Notas" instance=ExtResource( 16 )]
@@ -255,16 +342,145 @@ velocidad = 5.0
 [node name="PuntosPatrulla" type="Node" parent="EnemigoContenedor"]
 
 [node name="Position3D" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.326, 4.95683, -43.62 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.226, 4.95683, -67.518 )
 
 [node name="Position3D2" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.3491, 4.95683, -43.9959 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.6012, 4.95683, 49.32 )
 
 [node name="Position3D3" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -18.1304, 4.95683, 5.41653 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.4543, 4.95683, 2.23013 )
 
 [node name="Position3D4" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 14.1824, 4.95683, 6.94945 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0804, 4.95683, 25.385 )
+
+[node name="Position3D5" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0176, 4.95683, 0.349056 )
+
+[node name="Position3D6" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9548, 4.95683, 0.349056 )
+
+[node name="Position3D7" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5024, 4.95683, 8.77025 )
+
+[node name="Position3D8" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9576, 4.95683, -53.3645 )
+
+[node name="Position3D9" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.53361, 4.95683, -55.6405 )
+
+[node name="Position3D10" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.53361, 4.95683, -66.1101 )
+
+[node name="Position3D11" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.032, 4.95683, -66.5653 )
+
+[node name="Position3D12" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.378, 4.95683, -67.4757 )
+
+[node name="Position3D13" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0608, 4.95683, -36.9773 )
+
+[node name="Position3D14" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.2472, 4.95683, -65.8825 )
+
+[node name="Position3D15" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5284, 4.95683, -65.4273 )
+
+[node name="Position3D16" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.3492, 4.95683, -11.2585 )
+
+[node name="Position3D17" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0732, 4.95683, -68.3861 )
+
+[node name="Position3D18" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70.9399, 4.95683, -66.1101 )
+
+[node name="Position3D19" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3572, 4.95683, -67.7033 )
+
+[node name="Position3D20" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6332, 4.95683, -47.4469 )
+
+[node name="Position3D21" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6332, 4.95683, -47.4469 )
+
+[node name="Position3D22" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.59, 4.95683, -47.6745 )
+
+[node name="Position3D23" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.866, 4.95683, -24.0041 )
+
+[node name="Position3D24" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.8896, 4.95683, -23.0937 )
+
+[node name="Position3D25" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.662, 4.95683, -49.4953 )
+
+[node name="Position3D26" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.1584, 4.95683, -25.1421 )
+
+[node name="Position3D27" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.176, 4.95683, -22.4109 )
+
+[node name="Position3D28" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5488, 4.95683, 2.62504 )
+
+[node name="Position3D29" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.1296, 4.95683, 1.94224 )
+
+[node name="Position3D30" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -57.2892, 4.95683, 5.35624 )
+
+[node name="Position3D31" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -72.0832, 4.95683, 7.85983 )
+
+[node name="Position3D32" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -71.628, 4.95683, 41.7722 )
+
+[node name="Position3D33" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.176, 4.95683, 40.6342 )
+
+[node name="Position3D34" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4944, 4.95683, 43.3654 )
+
+[node name="Position3D35" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6736, 4.95683, 20.6054 )
+
+[node name="Position3D36" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4676, 4.95683, 20.1502 )
+
+[node name="Position3D37" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.516, 4.95683, 43.8206 )
+
+[node name="Position3D38" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6312, 4.95683, 42.455 )
+
+[node name="Position3D39" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5004, 4.95683, 17.8742 )
+
+[node name="Position3D40" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.1636, 4.95683, 17.8742 )
+
+[node name="Position3D41" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.1636, 4.95683, 33.8742 )
+
+[node name="Position3D42" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -53.2264, 4.95683, 24.315 )
+
+[node name="Position3D43" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55.2748, 4.95683, 2.23784 )
+
+[node name="Position3D44" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54.4284, 4.95683, 1.55505 )
+
+[node name="Position3D45" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.794, 4.95683, 43.8886 )
+
+[node name="Position3D46" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.3191, 4.95683, 49.8062 )
+
+[node name="Position3D47" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.3191, 4.95683, 49.8062 )
 
 [node name="Sonidos" type="Node" parent="."]
 
