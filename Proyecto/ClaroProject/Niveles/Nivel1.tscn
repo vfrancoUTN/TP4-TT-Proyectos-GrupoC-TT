@@ -336,151 +336,152 @@ transform = Transform( -4, 0, -4.98286e-07, 0, 4, 0, 6.03983e-07, 0, -3.3, -86.8
 [node name="EnemigoContenedor" type="Node" parent="."]
 
 [node name="Enemigo" parent="EnemigoContenedor" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0 )
+transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0.216617, 2.21885, -1.44906 )
 velocidad = 5.0
+distanciaPerseguidor = 40
 
 [node name="PuntosPatrulla" type="Node" parent="EnemigoContenedor"]
 
 [node name="Position3D" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.226, 4.95683, -67.518 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.226, 3.50682, -67.518 )
 
 [node name="Position3D2" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.6012, 4.95683, 49.32 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.6012, 3.50682, 49.32 )
 
 [node name="Position3D3" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.4543, 4.95683, 2.23013 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 72.4543, 3.50682, 2.23013 )
 
 [node name="Position3D4" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0804, 4.95683, 25.385 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 38.0804, 3.50682, 25.385 )
 
 [node name="Position3D5" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0176, 4.95683, 0.349056 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.0176, 3.50682, 0.349056 )
 
 [node name="Position3D6" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9548, 4.95683, 0.349056 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.9548, 3.50682, 0.349056 )
 
 [node name="Position3D7" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5024, 4.95683, 8.77025 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.5024, 3.50682, 8.77025 )
 
 [node name="Position3D8" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9576, 4.95683, -53.3645 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -19.9576, 3.50682, -53.3645 )
 
 [node name="Position3D9" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.53361, 4.95683, -55.6405 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.53361, 3.50682, -55.6405 )
 
 [node name="Position3D10" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.53361, 4.95683, -66.1101 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.53361, 3.50682, -66.1101 )
 
 [node name="Position3D11" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.032, 4.95683, -66.5653 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.032, 3.50682, -66.5653 )
 
 [node name="Position3D12" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.378, 4.95683, -67.4757 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.378, 3.50682, -67.4757 )
 
 [node name="Position3D13" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0608, 4.95683, -36.9773 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 56.0608, 3.50682, -36.9773 )
 
 [node name="Position3D14" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.2472, 4.95683, -65.8825 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 59.2472, 3.50682, -65.8825 )
 
 [node name="Position3D15" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5284, 4.95683, -65.4273 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.5284, 3.50682, -65.4273 )
 
 [node name="Position3D16" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.3492, 4.95683, -11.2585 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 35.3492, 3.50682, -11.2585 )
 
 [node name="Position3D17" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0732, 4.95683, -68.3861 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.0732, 3.50682, -68.3861 )
 
 [node name="Position3D18" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70.9399, 4.95683, -66.1101 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70.9399, 3.50682, -66.1101 )
 
 [node name="Position3D19" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3572, 4.95683, -67.7033 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3572, 3.50682, -67.7033 )
 
 [node name="Position3D20" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6332, 4.95683, -47.4469 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.6332, 3.50682, -47.4469 )
 
 [node name="Position3D21" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6332, 4.95683, -47.4469 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -43.6332, 3.50682, -47.4469 )
 
 [node name="Position3D22" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.59, 4.95683, -47.6745 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13.59, 3.50682, -47.6745 )
 
 [node name="Position3D23" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.866, 4.95683, -24.0041 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -15.866, 3.50682, -24.0041 )
 
 [node name="Position3D24" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.8896, 4.95683, -23.0937 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.8896, 3.50682, -23.0937 )
 
 [node name="Position3D25" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.662, 4.95683, -49.4953 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -63.662, 3.50682, -49.4953 )
 
 [node name="Position3D26" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.1584, 4.95683, -25.1421 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -61.1584, 3.50682, -25.1421 )
 
 [node name="Position3D27" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.176, 4.95683, -22.4109 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.176, 3.50682, -22.4109 )
 
 [node name="Position3D28" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5488, 4.95683, 2.62504 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -16.5488, 3.50682, 2.62504 )
 
 [node name="Position3D29" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.1296, 4.95683, 1.94224 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.1296, 3.50682, 1.94224 )
 
 [node name="Position3D30" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -57.2892, 4.95683, 5.35624 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -57.2892, 3.50682, 5.35624 )
 
 [node name="Position3D31" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -72.0832, 4.95683, 7.85983 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -72.0832, 3.50682, 7.85983 )
 
 [node name="Position3D32" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -71.628, 4.95683, 41.7722 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -71.628, 3.50682, 41.7722 )
 
 [node name="Position3D33" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.176, 4.95683, 40.6342 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.176, 3.50682, 40.6342 )
 
 [node name="Position3D34" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4944, 4.95683, 43.3654 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 13.4944, 3.50682, 43.3654 )
 
 [node name="Position3D35" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6736, 4.95683, 20.6054 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 11.6736, 3.50682, 20.6054 )
 
 [node name="Position3D36" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4676, 4.95683, 20.1502 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 26.4676, 3.50682, 20.1502 )
 
 [node name="Position3D37" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.516, 4.95683, 43.8206 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 28.516, 3.50682, 43.8206 )
 
 [node name="Position3D38" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6312, 4.95683, 42.455 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10.6312, 3.50682, 42.455 )
 
 [node name="Position3D39" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5004, 4.95683, 17.8742 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -14.5004, 3.50682, 17.8742 )
 
 [node name="Position3D40" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.1636, 4.95683, 17.8742 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -33.1636, 3.50682, 17.8742 )
 
 [node name="Position3D41" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.1636, 4.95683, 33.8742 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -41.1636, 3.50682, 33.8742 )
 
 [node name="Position3D42" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -53.2264, 4.95683, 24.315 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -53.2264, 3.50682, 24.315 )
 
 [node name="Position3D43" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55.2748, 4.95683, 2.23784 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55.2748, 3.50682, 2.23784 )
 
 [node name="Position3D44" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54.4284, 4.95683, 1.55505 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 54.4284, 3.50682, 1.55505 )
 
 [node name="Position3D45" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.794, 4.95683, 43.8886 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 55.794, 3.50682, 43.8886 )
 
 [node name="Position3D46" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.3191, 4.95683, 49.8062 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.3191, 3.50682, 49.8062 )
 
 [node name="Position3D47" type="Position3D" parent="EnemigoContenedor/PuntosPatrulla"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.3191, 4.95683, 49.8062 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 73.3191, 3.50682, 49.8062 )
 
 [node name="Sonidos" type="Node" parent="."]
 
