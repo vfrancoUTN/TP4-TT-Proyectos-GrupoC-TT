@@ -36,6 +36,7 @@ func patrullar(delta):
 		var d = global_transform.origin.distance_to(recorrido[0])
 		if d > 2:
 			global_transform.origin = global_transform.origin.linear_interpolate(recorrido[0], (velocidad*delta)/d)
+			look_at(recorrido[0], Vector3.UP)
 			moviendose = true
 		else:
 			moviendose = false
@@ -52,6 +53,7 @@ func perseguir(delta):
 	if dj < distanciaPerseguidor:
 		if jugador.getEscondido() == false:
 			global_transform.origin = global_transform.origin.linear_interpolate(jugador.global_transform.origin, (velocidad*delta)/dj)
+			look_at(jugador.global_transform.origin, Vector3.UP)
 			moviendose = true
 		else:
 			moviendose = false
