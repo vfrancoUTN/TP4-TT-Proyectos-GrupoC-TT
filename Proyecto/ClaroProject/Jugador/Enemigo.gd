@@ -72,3 +72,6 @@ func sonidoPisadas():
 func _on_Area_body_entered(body):
 	if body.has_method("morir"):
 		body.morir()
+#primero da el puzzle
+#puzzle si se pone mal se muere, sino vive
+#transportar al viejo al patio
