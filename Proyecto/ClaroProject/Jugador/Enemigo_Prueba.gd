@@ -1,8 +1,10 @@
 extends KinematicBody
 
+
 export (float) var velocidad
 export (int) var distanciaPerseguidor = 10
 onready var pisadas = $Pisadas
+onready var puzzle = $"../../Puzzle1"
 var posObjetivo = Vector3()
 var navegacion = Navigation
 var puntosLlegada = PoolVector3Array()
@@ -71,9 +73,12 @@ func sonidoPisadas():
 
 func _on_Area_body_entered(body):
 	get_tree().paused == true
+	puzzle.setPuzzle(true)
+	get_tree().paused == true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	$"../Puzzle1".show()
-	$".".translate(Vector3(0, 1.4, 0))
+	puzzle.show()
+	global_transform.origin=(Vector3(36, global_transform.origin.y, 31))
+	
 #primero da el puzzle
 #puzzle si se pone mal se muere, sino vive
 #transportar al viejo al patio
