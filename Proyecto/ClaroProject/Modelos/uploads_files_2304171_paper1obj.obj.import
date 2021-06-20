@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/uploads_files_2304171_paper1obj.obj-c89f5c99d35b2f5715908c15eb3ac939.mesh"
+
+[deps]
+
+files=[ "res://.import/uploads_files_2304171_paper1obj.obj-c89f5c99d35b2f5715908c15eb3ac939.mesh" ]
+
+source_file="res://Modelos/uploads_files_2304171_paper1obj.obj"
+dest_files=[ "res://.import/uploads_files_2304171_paper1obj.obj-c89f5c99d35b2f5715908c15eb3ac939.mesh", "res://.import/uploads_files_2304171_paper1obj.obj-c89f5c99d35b2f5715908c15eb3ac939.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

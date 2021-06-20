@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Jugador/Enemigo.gd" type="Script" id=1]
 [ext_resource path="res://Sonidos/Tos_Viejo.ogg" type="AudioStream" id=2]
 [ext_resource path="res://Sonidos/Pisadas_Viejo.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Modelos/old_man_OBJ/old_man_OBJ.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://Modelos/EnemigoAnim.tscn" type="PackedScene" id=5]
 
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.5
@@ -31,6 +33,7 @@ shape = SubResource( 2 )
 
 [node name="MeshInstance" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
+visible = false
 mesh = SubResource( 3 )
 material/0 = null
 
@@ -49,5 +52,26 @@ stream = ExtResource( 2 )
 unit_db = 25.0
 autoplay = true
 max_distance = 30.0
+
+[node name="old_man_OBJ" type="MeshInstance" parent="."]
+transform = Transform( 0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 0, -0.939782, 0 )
+visible = false
+mesh = ExtResource( 4 )
+material/0 = null
+material/1 = null
+material/2 = null
+material/3 = null
+material/4 = null
+material/5 = null
+material/6 = null
+material/7 = null
+material/8 = null
+material/9 = null
+material/10 = null
+material/11 = null
+material/12 = null
+
+[node name="Enemigo" parent="." instance=ExtResource( 5 )]
+transform = Transform( -1, 0, 8.74228e-08, 0, 1, 0, -8.74228e-08, 0, -1, 0, -0.602847, 0 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]
