@@ -76,7 +76,7 @@ transform = Transform( -0.205897, 0, 0.978574, 0, 1, 0, -0.978574, 0, -0.205897,
 [node name="PrimeraPersona" parent="." groups=[
 "Jugador",
 ] instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368099, 2.20526, -38.6914 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.5969, 2.20526, 53.4653 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." groups=[
 "EfectosVisuales",
@@ -316,4 +316,4 @@ visible = false
 visible = false
 
 [node name="TrampaPrueba" parent="." instance=ExtResource( 17 )]
-transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 23.5502, 0, 44.496 )
+transform = Transform( 5, 0, 0, 0, 5, 0, 0, 0, 5, 23.0871, 0, 41.7174 )
