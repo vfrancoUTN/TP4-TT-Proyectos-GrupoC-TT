@@ -1,9 +1,10 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Imagenes/SkyBoxGrande.jpg" type="Texture" id=1]
 [ext_resource path="res://Pruebas/Spatial.gd" type="Script" id=2]
 [ext_resource path="res://Objetos/LuzTitilante.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Jugador/PrimeraPersona.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Puzzles/Puzzle1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Objetos/Trampa.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Objetos/Amigo.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Objetos/Llave.tscn" type="PackedScene" id=8]
@@ -498,3 +499,8 @@ stream = ExtResource( 14 )
 
 [node name="GUI" parent="." instance=ExtResource( 15 )]
 visible = false
+
+[node name="Puzzle1" parent="." instance=ExtResource( 5 )]
+visible = false
+
+[node name="Puzzles" type="Node" parent="."]
