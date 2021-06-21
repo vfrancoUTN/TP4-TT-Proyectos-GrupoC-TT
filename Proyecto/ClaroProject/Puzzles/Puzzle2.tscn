@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Imagenes/PantallaMuerte.jpg" type="Texture" id=1]
 [ext_resource path="res://Fuentes/remnant/Remnant-Regular.ttf" type="DynamicFontData" id=2]
 [ext_resource path="res://Puzzles/Puzzle1.gd" type="Script" id=3]
+[ext_resource path="res://Musica/Main_Menu.mp3" type="AudioStream" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -85,6 +86,7 @@ margin_left = -315.05
 margin_top = -139.287
 margin_right = 381.95
 margin_bottom = -43.2868
+rect_pivot_offset = Vector2( 425.754, 48.0001 )
 custom_fonts/font = SubResource( 3 )
 text = "Incorrecta"
 __meta__ = {
@@ -106,6 +108,10 @@ text = "Correcta"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
 
 [connection signal="pressed" from="Opcion 1" to="." method="_on_Opcion_1_pressed"]
 [connection signal="pressed" from="Opcion 2" to="." method="_on_Opcion_2_pressed"]
