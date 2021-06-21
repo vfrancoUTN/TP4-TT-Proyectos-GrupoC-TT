@@ -13,7 +13,7 @@ var atrapadas = 0
 func _on_Trampa_body_entered(body):
 	atrapadas = atrapadas + 1
 	
-	if atrapadas < 3:
+	if atrapadas > 3:
 		if body.has_method("morir"):
 			body.morir()
 	

@@ -76,7 +76,7 @@ transform = Transform( -0.205897, 0, 0.978574, 0, 1, 0, -0.978574, 0, -0.205897,
 [node name="PrimeraPersona" parent="." groups=[
 "Jugador",
 ] instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368099, 2.20526, -38.6914 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 36.5849, 2.20526, 44.4879 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." groups=[
 "EfectosVisuales",
@@ -84,7 +84,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368099, 2.20526, -38.6914 )
 environment = SubResource( 2 )
 
 [node name="MockupCasa" parent="." instance=ExtResource( 5 )]
-transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0 )
+transform = Transform( 0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0.553035 )
 
 [node name="Trampas" type="Node" parent="."]
 
