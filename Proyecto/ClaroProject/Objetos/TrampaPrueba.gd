@@ -4,10 +4,19 @@ onready var puzzle = $"../Puzzle1"
 onready var puzzle1C = $"../Puzzle_1C"
 onready var puzzle1B = $"../Puzzle1_B"
 
+
 var rng = RandomNumberGenerator.new()
 var numAleatorio
 
+var atrapadas = 0
+
 func _on_Trampa_body_entered(body):
+	atrapadas = atrapadas + 1
+	
+	if atrapadas < 3:
+		if body.has_method("morir"):
+			body.morir()
+	
 	get_tree().paused == true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 	numAleatorio = rng.randi_range(1,3)
