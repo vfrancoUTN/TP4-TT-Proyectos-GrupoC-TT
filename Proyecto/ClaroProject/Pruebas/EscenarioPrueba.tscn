@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://Imagenes/SkyBoxGrande.jpg" type="Texture" id=1]
 [ext_resource path="res://Pruebas/Spatial.gd" type="Script" id=2]
@@ -19,6 +19,8 @@
 [ext_resource path="res://Objetos/TrampaPrueba.tscn" type="PackedScene" id=17]
 [ext_resource path="res://Puzzles/Puzzle1.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Jugador/Enemigo_Prueba.gd" type="Script" id=19]
+[ext_resource path="res://Puzzles/Puzzle_1C.tscn" type="PackedScene" id=20]
+[ext_resource path="res://Puzzles/Puzzle1_B.tscn" type="PackedScene" id=21]
 
 [sub_resource type="PanoramaSky" id=1]
 radiance_size = 4
@@ -302,6 +304,12 @@ stream = ExtResource( 13 )
 stream = ExtResource( 14 )
 
 [node name="Puzzle1" parent="." instance=ExtResource( 18 )]
+visible = false
+
+[node name="Puzzle_1C" parent="." instance=ExtResource( 20 )]
+visible = false
+
+[node name="Puzzle1_B" parent="." instance=ExtResource( 21 )]
 visible = false
 
 [node name="GUI" parent="." instance=ExtResource( 15 )]
