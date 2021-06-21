@@ -75,11 +75,11 @@ __meta__ = {
 }
 
 [node name="LabelClaro" type="Label" parent="."]
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-margin_top = -526.0
-margin_bottom = -391.0
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -960.0
+margin_right = 960.0
+margin_bottom = 135.0
 custom_fonts/font = SubResource( 1 )
 text = "Claro"
 align = 1
@@ -93,10 +93,14 @@ autoplay = true
 
 [node name="Jugadores" type="Panel" parent="."]
 visible = false
-margin_left = 716.131
-margin_top = 126.551
-margin_right = 1232.13
-margin_bottom = 958.551
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -258.0
+margin_top = -416.0
+margin_right = 258.0
+margin_bottom = 416.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -145,10 +149,14 @@ __meta__ = {
 }
 
 [node name="Conexion" type="Control" parent="."]
-margin_left = 357.82
-margin_top = 199.714
-margin_right = 1680.82
-margin_bottom = 798.714
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -661.5
+margin_top = -299.5
+margin_right = 661.5
+margin_bottom = 299.5
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -250,14 +258,10 @@ window_title = "Alerta!"
 
 [node name="BotonVolver" type="Button" parent="."]
 modulate = Color( 1, 1, 1, 0.498039 )
-anchor_left = 0.481983
-anchor_top = 0.652
-anchor_right = 0.481983
-anchor_bottom = 0.652
-margin_left = -141.061
-margin_top = 251.391
-margin_right = 216.939
-margin_bottom = 351.391
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_top = -100.0
+margin_right = 358.0
 custom_fonts/font = SubResource( 9 )
 text = "VOLVER"
 __meta__ = {
