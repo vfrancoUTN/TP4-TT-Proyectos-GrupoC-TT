@@ -74,7 +74,7 @@ transform = Transform( -0.205897, 0, 0.978574, 0, 1, 0, -0.978574, 0, -0.205897,
 [node name="PrimeraPersona" parent="." groups=[
 "Jugador",
 ] instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 33.3681, 2.20526, 49.3086 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.368099, 2.20526, -38.6914 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." groups=[
 "EfectosVisuales",
@@ -270,8 +270,9 @@ shape = SubResource( 5 )
 [node name="EnemigoContenedor" type="Node" parent="."]
 
 [node name="Enemigo" parent="EnemigoContenedor" instance=ExtResource( 10 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0.919671, -13 )
 script = ExtResource( 19 )
+velocidad = 5.0
 
 [node name="PuntosPatrulla" type="Node" parent="EnemigoContenedor"]
 

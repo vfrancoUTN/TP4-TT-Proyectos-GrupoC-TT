@@ -24,4 +24,5 @@ func _on_Opcion_2_pressed():
 func _on_Opcion_3_pressed():
 	setPuzzle(false)
 	get_tree().paused == false
-	hide() # Replace with function body.
+	hide()
+	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
