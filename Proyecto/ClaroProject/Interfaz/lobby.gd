@@ -37,12 +37,13 @@ func _boton_unirse_presionado():
 	if not ip.is_valid_ip_address():
 		$Conexion/LabelError.text = "Dirección IP no válida!"
 		return
-		$Conexion/LabelError.text = ""
-		$Conexion/BotonCrear.disabled = true
-		$Conexion/BotonUnirse.disabled = true
+	
+	$Conexion/LabelError.text = ""
+	$Conexion/BotonCrear.disabled = true
+	$Conexion/BotonUnirse.disabled = true
 		
-		var nombre_jugador = $Conexion/Nombre.text
-		Multijugador.unirse_servidor(ip, nombre_jugador)
+	var nombre_jugador = $Conexion/Nombre.text
+	Multijugador.unirse_servidor(ip, nombre_jugador)
 		
 func _conexion_ok():
 	$Conexion.hide()
