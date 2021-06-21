@@ -1,10 +1,11 @@
 extends KinematicBody
 
-
 export (float) var velocidad
 export (int) var distanciaPerseguidor = 10
 onready var pisadas = $Pisadas
 onready var puzzle = $"../../Puzzle1"
+
+
 var posObjetivo = Vector3()
 var navegacion = Navigation
 var puntosLlegada = PoolVector3Array()
@@ -12,6 +13,9 @@ var recorrido = []
 var indice = 0
 var jugador = KinematicBody
 var moviendose = false
+
+var rng = RandomNumberGenerator.new()
+var numeroAletorio
 
 func _ready():
 	jugador = get_tree().get_nodes_in_group("Jugador")[0]
@@ -76,6 +80,7 @@ func _on_Area_body_entered(body):
 	puzzle.setPuzzle(true)
 	get_tree().paused == true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
+	numeroAletorio = rng.randi_range(1,3)    
 	puzzle.show()
 	global_transform.origin=(Vector3(36, global_transform.origin.y, 31))
 	
