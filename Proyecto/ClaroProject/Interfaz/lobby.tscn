@@ -1,0 +1,271 @@
+[gd_scene load_steps=18 format=2]
+
+[ext_resource path="res://Imagenes/PantallaMuerte.jpg" type="Texture" id=1]
+[ext_resource path="res://Interfaz/lobby.gd" type="Script" id=2]
+[ext_resource path="res://Fuentes/remnant/Remnant-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Musica/Main_Menu.mp3" type="AudioStream" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+outline_size = 3
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 19
+font_data = SubResource( 2 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 31
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 25
+font_data = SubResource( 6 )
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 54
+font_data = SubResource( 8 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 36
+font_data = SubResource( 10 )
+
+[sub_resource type="DynamicFontData" id=12]
+font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=13]
+size = 34
+font_data = SubResource( 12 )
+
+[node name="Lobby" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.513726, 0.513726, 0.513726, 1 )
+self_modulate = Color( 0.815686, 0.815686, 0.815686, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource( 1 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelClaro" type="Label" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -526.0
+margin_bottom = -391.0
+custom_fonts/font = SubResource( 1 )
+text = "Claro"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 4 )
+autoplay = true
+
+[node name="Jugadores" type="Panel" parent="."]
+visible = false
+margin_left = 716.131
+margin_top = 126.551
+margin_right = 1232.13
+margin_bottom = 958.551
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelEspera" type="Label" parent="Jugadores"]
+margin_right = 516.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 3 )
+text = "Esperando jugadores..."
+align = 1
+valign = 1
+uppercase = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonIniciar" type="Button" parent="Jugadores"]
+margin_left = 146.0
+margin_top = 775.0
+margin_right = 343.0
+margin_bottom = 829.0
+custom_fonts/font = SubResource( 5 )
+text = "Iniciar"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemList" type="ItemList" parent="Jugadores"]
+margin_left = 26.0
+margin_top = 55.5386
+margin_right = 490.0
+margin_bottom = 757.539
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LinkButton" type="LinkButton" parent="Jugadores"]
+margin_left = 156.367
+margin_top = 717.896
+margin_right = 320.367
+margin_bottom = 743.896
+custom_fonts/font = SubResource( 7 )
+text = "SABER TU IP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Conexion" type="Control" parent="."]
+margin_left = 357.82
+margin_top = 199.714
+margin_right = 1680.82
+margin_bottom = 798.714
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonCrear" type="Button" parent="Conexion"]
+modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.481983
+anchor_top = 0.652
+anchor_right = 0.481983
+anchor_bottom = 0.652
+margin_left = -569.137
+margin_top = 1.25729
+margin_right = -211.137
+margin_bottom = 101.257
+custom_fonts/font = SubResource( 9 )
+text = "CREAR"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BotonUnirse" type="Button" parent="Conexion"]
+modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.481983
+anchor_top = 0.652
+anchor_right = 0.481983
+anchor_bottom = 0.652
+margin_left = 133.275
+margin_top = 1.25729
+margin_right = 491.275
+margin_bottom = 101.257
+custom_fonts/font = SubResource( 9 )
+text = "UNIRSE"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelNombre" type="Label" parent="Conexion"]
+margin_left = 69.0
+margin_top = 31.0
+margin_right = 239.0
+margin_bottom = 68.0
+custom_fonts/font = SubResource( 11 )
+text = "Nombre:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelIP" type="Label" parent="Conexion"]
+margin_left = 69.0
+margin_top = 229.0
+margin_right = 126.0
+margin_bottom = 266.0
+custom_fonts/font = SubResource( 11 )
+text = "IP:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Nombre" type="LineEdit" parent="Conexion"]
+margin_left = 66.2814
+margin_top = 99.0
+margin_right = 1126.28
+margin_bottom = 177.0
+custom_fonts/font = SubResource( 13 )
+max_length = 45
+placeholder_text = "Ingrese su nombre"
+placeholder_alpha = 0.2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IP" type="LineEdit" parent="Conexion"]
+margin_left = 69.0
+margin_top = 277.0
+margin_right = 1129.0
+margin_bottom = 355.0
+custom_fonts/font = SubResource( 13 )
+max_length = 45
+placeholder_text = "127.0.0.1"
+placeholder_alpha = 0.2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LabelError" type="Label" parent="Conexion"]
+margin_left = 69.0
+margin_top = 514.0
+margin_right = 1126.0
+margin_bottom = 602.0
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AcceptDialog" type="AcceptDialog" parent="."]
+margin_right = 83.0
+margin_bottom = 58.0
+window_title = "Alerta!"
+
+[node name="BotonVolver" type="Button" parent="."]
+modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.481983
+anchor_top = 0.652
+anchor_right = 0.481983
+anchor_bottom = 0.652
+margin_left = -141.061
+margin_top = 251.391
+margin_right = 216.939
+margin_bottom = 351.391
+custom_fonts/font = SubResource( 9 )
+text = "VOLVER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Jugadores/BotonIniciar" to="." method="_boton_iniciar_presionado"]
+[connection signal="pressed" from="Jugadores/LinkButton" to="." method="_boton_ip_presionado"]
+[connection signal="pressed" from="Conexion/BotonCrear" to="." method="_boton_crear_presionado"]
+[connection signal="pressed" from="Conexion/BotonUnirse" to="." method="_boton_unirse_presionado"]
+[connection signal="pressed" from="BotonVolver" to="." method="_boton_volver_presionado"]
