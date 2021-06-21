@@ -52,7 +52,7 @@ func borrar_jugador(id):
 	emit_signal("actualizacion_lista_jugadores")
 	
 remote func pre_inicio_juego():
-	var nivel = rng.randi_range(0, 3)
+	nivel = rng.randi_range(0, 3)
 	var juego
 	if get_tree().get_network_unique_id() == 1:
 		if nivel == 0:
