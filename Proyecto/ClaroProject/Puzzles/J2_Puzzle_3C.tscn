@@ -1,0 +1,149 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://Musica/Main_Menu.mp3" type="AudioStream" id=1]
+[ext_resource path="res://Puzzles/Imagenes y NOTA/PUZZLE_3C_IMAGENES/0b52c1f8d20e07f1ef9490c8f2d03104.jpg" type="Texture" id=2]
+[ext_resource path="res://Imagenes/PantallaMuerte.jpg" type="Texture" id=3]
+[ext_resource path="res://Puzzles/Imagenes y NOTA/PUZZLE_3C_IMAGENES/plomo-usos-e1535983308930.jpg" type="Texture" id=4]
+[ext_resource path="res://Puzzles/Puzzle_B.gd" type="Script" id=5]
+[ext_resource path="res://Puzzles/Imagenes y NOTA/PUZZLE_3C_IMAGENES/latas.jpg" type="Texture" id=6]
+[ext_resource path="res://Puzzles/Imagenes y NOTA/PUZZLE_3C_IMAGENES/balas-de-plomo-e1584546148427.jpg" type="Texture" id=7]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 56
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 56
+font_data = SubResource( 3 )
+
+[node name="J2_Puzzle_3C" type="Control"]
+pause_mode = 2
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.513726, 0.513726, 0.513726, 1 )
+self_modulate = Color( 0.815686, 0.815686, 0.815686, 1 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -2.82849
+margin_right = -2.82849
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opcion 1" type="Button" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.481
+anchor_top = 0.652
+anchor_right = 0.481
+anchor_bottom = 0.652
+margin_left = -315.05
+margin_top = -280.049
+margin_right = 381.95
+margin_bottom = -184.049
+custom_fonts/font = SubResource( 2 )
+text = "Albania"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opcion 2" type="Button" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.481
+anchor_top = 0.652
+anchor_right = 0.481
+anchor_bottom = 0.652
+margin_left = -315.05
+margin_top = -139.287
+margin_right = 381.95
+margin_bottom = -43.2868
+custom_fonts/font = SubResource( 2 )
+text = "Andorra"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Opcion 3" type="Button" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.481
+anchor_top = 0.652
+anchor_right = 0.481
+anchor_bottom = 0.652
+margin_left = -315.05
+margin_top = -0.169678
+margin_right = 381.95
+margin_bottom = 95.8308
+custom_fonts/font = SubResource( 4 )
+text = "ALGERIA"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+autoplay = true
+
+[node name="PISTA 3" type="TextureRect" parent="."]
+margin_left = 337.118
+margin_top = 519.142
+margin_right = 959.118
+margin_bottom = 896.142
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PISTA 4" type="TextureRect" parent="."]
+margin_left = 1095.03
+margin_top = 78.1716
+margin_right = 1654.03
+margin_bottom = 466.172
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PISTA 5" type="TextureRect" parent="."]
+margin_left = 345.461
+margin_top = 69.8284
+margin_right = 950.461
+margin_bottom = 472.828
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PISTA 6" type="TextureRect" parent="."]
+margin_left = 1092.0
+margin_top = 520.0
+margin_right = 1644.0
+margin_bottom = 889.0
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Opcion 1" to="." method="_on_Opcion_1_pressed"]
+[connection signal="pressed" from="Opcion 2" to="." method="_on_Opcion_2_pressed"]
+[connection signal="pressed" from="Opcion 3" to="." method="_on_Opcion_3_pressed"]
