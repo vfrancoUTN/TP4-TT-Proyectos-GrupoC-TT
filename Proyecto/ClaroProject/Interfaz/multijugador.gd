@@ -82,7 +82,7 @@ remote func pre_inicio_juego():
 		
 	get_tree().get_root().add_child(juego)
 	get_tree().get_root().get_node("res://Interfaz/lobby.tscn").hide()
-	#get_tree().get_root().get_node("lobby").hide()
+	get_tree().get_root().get_node("Lobby").hide()
 	#var escena_jugador = preload("res://Jugador/PrimeraPersona.tscn")
 	#jugador.set_network_master(get_tree().get_network_unique_id())
 	
