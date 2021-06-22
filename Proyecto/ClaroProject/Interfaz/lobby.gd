@@ -8,7 +8,6 @@ func _ready():
 	Multijugador.connect("actualizacion_lista_jugadores", self, "actualizar_sala")
 	Multijugador.connect("juego_terminado", self, "_juego_terminado")
 	Multijugador.connect("error_juego", self, "_error_juego")
-	print(Multijugador.nivel)
 	#if OS.has_environment("USERNAME"):
 	#	$Conexion/Nombre.text = OS.get_environment("USERNAME")
 	#else:
