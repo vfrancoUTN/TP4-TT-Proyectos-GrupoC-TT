@@ -30,7 +30,7 @@ func _jugador_desconectado(id):
 	else:
 		borrar_jugador(id)
 		
-func _conexion_ok():
+#func _conexion_ok():
 	emit_signal("conexion_exitosa")
 	
 func _servidor_desconectado():
@@ -55,6 +55,11 @@ remote func pre_inicio_juego():
 	nivel = rng.randi_range(0, 3)
 	var juego
 	var jugador = load("res://Jugador/PrimeraPersona.tscn").instance()
+			
+	for j_id in jugadores:
+		j_id.set_name(str(j_id))
+		jugador.set_network_master(j_id)
+			
 	if get_tree().get_network_unique_id() == 1:
 		if nivel == 0:
 			juego = load("res://Niveles/Nivel1.tscn").instance()
@@ -74,15 +79,13 @@ remote func pre_inicio_juego():
 		else:
 			juego = load("res://Niveles/Nivel4P2.tscn").instance()
 			
-			
 		if not get_tree().is_network_server():
 			rpc_id(1, "juego_listo", get_tree().get_network_unique_id())
 		elif jugadores.size() == 0:
 			post_inicio_juego()
 		
 	get_tree().get_root().add_child(juego)
-	get_tree().get_root().get_node("res://Interfaz/lobby.tscn").hide()
-	#get_tree().get_root().get_node("lobby").hide()
+	get_tree().get_root().get_node("Lobby").hide()
 	#var escena_jugador = preload("res://Jugador/PrimeraPersona.tscn")
 	#jugador.set_network_master(get_tree().get_network_unique_id())
 	
