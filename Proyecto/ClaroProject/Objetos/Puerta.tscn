@@ -1,22 +1,35 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://Modelos/Material_001.material" type="Material" id=1]
 [ext_resource path="res://Objetos/Puerta2.gd" type="Script" id=2]
+[ext_resource path="res://Sonidos/Puerta 2.ogg" type="AudioStream" id=3]
+[ext_resource path="res://Modelos/Puerta.obj" type="ArrayMesh" id=4]
+[ext_resource path="res://Modelos/Metal.material" type="Material" id=5]
 
 [sub_resource type="CubeMesh" id=1]
 
 [sub_resource type="Skin" id=2]
 
 [sub_resource type="BoxShape" id=3]
+extents = Vector3( 0.640366, 1.13375, 0.184369 )
 
 [sub_resource type="BoxShape" id=4]
-extents = Vector3( 1.15019, 1.12366, 1.2263 )
+extents = Vector3( 0.788597, 1.12366, 0.302591 )
 
-[node name="PuertaMock" type="StaticBody"]
+[node name="PuertaMock" type="StaticBody" groups=[
+"Puertas",
+]]
 collision_layer = 16
 script = ExtResource( 2 )
 
+[node name="Puerta" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.18751, -0.920032, 27.0638 )
+mesh = ExtResource( 4 )
+material/0 = ExtResource( 1 )
+material/1 = ExtResource( 5 )
+
 [node name="MeshInstance" type="MeshInstance" parent="."]
+visible = false
 layers = 16
 mesh = SubResource( 1 )
 skin = SubResource( 2 )
@@ -29,5 +42,8 @@ shape = SubResource( 3 )
 
 [node name="CollisionShape" type="CollisionShape" parent="Area"]
 shape = SubResource( 4 )
+
+[node name="Sonido" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource( 3 )
 
 [connection signal="body_entered" from="Area" to="." method="_on_Area_body_entered"]

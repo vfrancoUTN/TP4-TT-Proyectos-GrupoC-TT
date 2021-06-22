@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/aftertest.mp3-832717f14ef880792bc683140d781de9.mp3str"
+
+[deps]
+
+source_file="res://Musica/aftertest.mp3"
+dest_files=[ "res://.import/aftertest.mp3-832717f14ef880792bc683140d781de9.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

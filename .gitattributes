@@ -1,6 +1,6 @@
 # Archivos grandes (de multimetia) para pasar por lfs
 *.blend
-*.fbx
+*.fbx filter=lfs diff=lfs merge=lfs -text
 *.glb
 *.png
 *.ogg
@@ -10,3 +10,6 @@
 *.zip
 *.rar
 *.material
+*.x86_64
+*.blend1 filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
