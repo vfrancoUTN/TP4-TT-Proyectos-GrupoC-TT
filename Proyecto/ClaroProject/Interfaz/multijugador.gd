@@ -51,7 +51,7 @@ func borrar_jugador(id):
 	emit_signal("actualizacion_lista_jugadores")
 	
 remote func pre_inicio_juego():
-	var nivel = randi()%4+1
+	var nivel = randi() % 3
 	var juego
 	var jugador = load("res://Jugador/PrimeraPersona.tscn").instance()
 			
@@ -59,20 +59,20 @@ remote func pre_inicio_juego():
 		jugador.set_network_master(j_id)
 			
 	if get_tree().get_network_unique_id() == 1:
-		if nivel == 1:
+		if nivel == 0:
 			juego = load("res://Niveles/Nivel1.tscn").instance()
-		elif nivel == 2:
+		elif nivel == 1:
 			juego = load("res://Niveles/Nivel2.tscn").instance()
-		elif nivel == 3:
+		elif nivel == 2:
 			juego = load("res://Niveles/Nivel3.tscn").instance()
 		else:
 			juego = load("res://Niveles/Nivel4.tscn").instance()
 	elif get_tree().get_network_unique_id() != 1:
-		if nivel == 1:
+		if nivel == 0:
 			juego = load("res://Niveles/Nivel1P2.tscn").instance()
-		elif nivel == 2:
+		elif nivel == 1:
 			juego = load("res://Niveles/Nivel2P2.tscn").instance()
-		elif nivel == 3:
+		elif nivel == 2:
 			juego = load("res://Niveles/Nivel3P2.tscn").instance()
 		else:
 			juego = load("res://Niveles/Nivel4P2.tscn").instance()
