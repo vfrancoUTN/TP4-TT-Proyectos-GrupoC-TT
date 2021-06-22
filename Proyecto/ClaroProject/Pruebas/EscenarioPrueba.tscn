@@ -17,10 +17,10 @@
 [ext_resource path="res://Interfaz/GUIEnJuego.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Objetos/Nota.tscn" type="PackedScene" id=16]
 [ext_resource path="res://Objetos/TrampaPrueba.tscn" type="PackedScene" id=17]
-[ext_resource path="res://Puzzles/Puzzle1.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Jugador/Enemigo_Prueba.gd" type="Script" id=19]
 [ext_resource path="res://Puzzles/Puzzle_1C.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Puzzles/Puzzle1_B.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Puzzles/Puzzle_1B.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Puzzles/Puzzle_1A.tscn" type="PackedScene" id=22]
 
 [sub_resource type="PanoramaSky" id=1]
 radiance_size = 4
@@ -303,16 +303,16 @@ stream = ExtResource( 13 )
 [node name="Llave" type="AudioStreamPlayer" parent="Sonidos"]
 stream = ExtResource( 14 )
 
-[node name="Puzzle1" parent="." instance=ExtResource( 18 )]
+[node name="GUI" parent="." instance=ExtResource( 15 )]
 visible = false
 
-[node name="Puzzle_1C" parent="." instance=ExtResource( 20 )]
+[node name="Puzzle_1A" parent="." instance=ExtResource( 22 )]
 visible = false
 
 [node name="Puzzle1_B" parent="." instance=ExtResource( 21 )]
 visible = false
 
-[node name="GUI" parent="." instance=ExtResource( 15 )]
+[node name="Puzzle_1C" parent="." instance=ExtResource( 20 )]
 visible = false
 
 [node name="TrampaPrueba" parent="." instance=ExtResource( 17 )]

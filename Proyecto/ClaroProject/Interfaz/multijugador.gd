@@ -116,8 +116,8 @@ remote func pre_inicio_juego():
 #		elif jugadores.size() == 0:
 #			post_inicio_juego()
 			
-<<<<<<< Updated upstream
-=======
+ <<<<<<< Updated upstream
+ =======
 #remote func cargar_mapa(num):
 #	var juego
 #	if num == 0:
@@ -136,7 +136,7 @@ remote func cargar_nivel():
 	pass
 	
 
->>>>>>> Stashed changes
+ >>>>>>> Stashed changes
 remote func post_inicio_juego():
 	get_tree().set_pause(false)
 	
