@@ -339,8 +339,7 @@ transform = Transform( -4, 0, -4.98286e-07, 0, 4, 0, 6.03983e-07, 0, -3.3, -86.8
 
 [node name="Enemigo" parent="EnemigoContenedor" instance=ExtResource( 10 )]
 transform = Transform( 3, 0, 0, 0, 3, 0, 0, 0, 3, 0.216617, 2.21885, -1.44906 )
-velocidad = 5.0
-distanciaPerseguidor = 40
+script = null
 
 [node name="PuntosPatrulla" type="Node" parent="EnemigoContenedor"]
 

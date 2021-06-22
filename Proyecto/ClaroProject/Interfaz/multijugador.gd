@@ -10,7 +10,6 @@ var peer = null
 var nombre_jugador = "Sin Nombre"
 var jugadores = {}
 var jugadores_listos = {}
-var rng = RandomNumberGenerator.new()
 var nivel = 0
 
 signal actualizacion_lista_jugadores()
@@ -52,7 +51,7 @@ func borrar_jugador(id):
 	emit_signal("actualizacion_lista_jugadores")
 	
 remote func pre_inicio_juego():
-	nivel = rng.randi_range(0, 3)
+	var nivel = randi()%4+1
 	var juego
 	var jugador = load("res://Jugador/PrimeraPersona.tscn").instance()
 			
@@ -60,20 +59,20 @@ remote func pre_inicio_juego():
 		jugador.set_network_master(j_id)
 			
 	if get_tree().get_network_unique_id() == 1:
-		if nivel == 0:
+		if nivel == 1:
 			juego = load("res://Niveles/Nivel1.tscn").instance()
-		elif nivel == 1:
-			juego = load("res://Niveles/Nivel2.tscn").instance()
 		elif nivel == 2:
+			juego = load("res://Niveles/Nivel2.tscn").instance()
+		elif nivel == 3:
 			juego = load("res://Niveles/Nivel3.tscn").instance()
 		else:
 			juego = load("res://Niveles/Nivel4.tscn").instance()
-	else:
-		if nivel == 0:
+	elif get_tree().get_network_unique_id() != 1:
+		if nivel == 1:
 			juego = load("res://Niveles/Nivel1P2.tscn").instance()
-		elif nivel == 1:
-			juego = load("res://Niveles/Nivel2P2.tscn").instance()
 		elif nivel == 2:
+			juego = load("res://Niveles/Nivel2P2.tscn").instance()
+		elif nivel == 3:
 			juego = load("res://Niveles/Nivel3P2.tscn").instance()
 		else:
 			juego = load("res://Niveles/Nivel4P2.tscn").instance()
@@ -82,6 +81,8 @@ remote func pre_inicio_juego():
 			rpc_id(1, "juego_listo", get_tree().get_network_unique_id())
 		elif jugadores.size() == 0:
 			post_inicio_juego()
+			
+	print(str(nivel))
 		
 	get_tree().get_root().add_child(juego)
 	get_tree().get_root().get_node("Lobby").hide()
@@ -115,8 +116,8 @@ remote func post_inicio_juego():
 remote func juego_listo(id):
 	assert(get_tree().is_network_server())
 	
-	if not id in jugadores_listos:
-		jugadores_listos.append(id)
+	#if not id in jugadores_listos:
+	#	jugadores_listos.append(id)
 		
 	if jugadores_listos.size() == jugadores.size():
 		for j in jugadores:
@@ -154,7 +155,7 @@ func comenzar_juego():
 	print(get_tree().get_network_unique_id())
 		
 	for j in jugadores:
-		rpc_id(j, "pre_inicio_juego", pos_spawn)
+		rpc_id(j, "pre_inicio_juego")
 		
 	pre_inicio_juego()
 	
