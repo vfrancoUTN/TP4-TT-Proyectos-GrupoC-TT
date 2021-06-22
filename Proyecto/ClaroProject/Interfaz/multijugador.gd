@@ -54,6 +54,7 @@ func borrar_jugador(id):
 remote func pre_inicio_juego():
 	nivel = rng.randi_range(0, 3)
 	var juego
+	var jugador = load("res://Jugador/PrimeraPersona.tscn").instance()
 	if get_tree().get_network_unique_id() == 1:
 		if nivel == 0:
 			juego = load("res://Niveles/Nivel1.tscn").instance()
@@ -72,6 +73,12 @@ remote func pre_inicio_juego():
 			juego = load("res://Niveles/Nivel3P2.tscn").instance()
 		else:
 			juego = load("res://Niveles/Nivel4P2.tscn").instance()
+			
+			
+		if not get_tree().is_network_server():
+			rpc_id(1, "juego_listo", get_tree().get_network_unique_id())
+		elif jugadores.size() == 0:
+			post_inicio_juego()
 		
 	get_tree().get_root().add_child(juego)
 	get_tree().get_root().get_node("res://Interfaz/lobby.tscn").hide()
