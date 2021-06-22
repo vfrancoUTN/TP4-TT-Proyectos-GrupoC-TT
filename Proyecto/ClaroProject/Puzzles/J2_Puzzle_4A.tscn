@@ -28,7 +28,7 @@ font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
 size = 56
 font_data = SubResource( 4 )
 
-[node name="J2_Puzzle_4A" type="Control"]
+[node name="J2_Puzzle1_B" type="Control"]
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
