@@ -1,15 +1,1 @@
 # Archivos grandes (de multimetia) para pasar por lfs
-*.blend
-*.fbx filter=lfs diff=lfs merge=lfs -text
-*.glb
-*.png
-*.ogg
-*.obj
-*.wav
-*.mp3
-*.zip
-*.rar
-*.material
-*.x86_64
-*.blend1 filter=lfs diff=lfs merge=lfs -text
-*.jpg filter=lfs diff=lfs merge=lfs -text

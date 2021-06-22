@@ -1,16 +1,16 @@
 [gd_scene load_steps=10 format=2]
 
-[ext_resource path="res://Fuentes/remnant/Remnant-Regular.ttf" type="DynamicFontData" id=1]
-[ext_resource path="res://Interfaz/Lobby_backup.gd" type="Script" id=2]
-[ext_resource path="res://Imagenes/PantallaMuerte.jpg" type="Texture" id=3]
-[ext_resource path="res://Musica/Main_Menu.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Interfaz/Lobby.gd" type="Script" id=1]
+[ext_resource path="res://Musica/Main_Menu.mp3" type="AudioStream" id=2]
+[ext_resource path="res://Fuentes/remnant/Remnant-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://Imagenes/PantallaMuerte.jpg" type="Texture" id=4]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
 outline_size = 3
 outline_color = Color( 0, 0, 0, 1 )
 use_filter = true
-font_data = ExtResource( 1 )
+font_data = ExtResource( 3 )
 
 [sub_resource type="DynamicFontData" id=2]
 font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
@@ -29,7 +29,7 @@ font_data = SubResource( 4 )
 [node name="Lobby" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
+script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -39,7 +39,7 @@ modulate = Color( 0.513726, 0.513726, 0.513726, 1 )
 self_modulate = Color( 0.815686, 0.815686, 0.815686, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
-texture = ExtResource( 3 )
+texture = ExtResource( 4 )
 expand = true
 stretch_mode = 1
 __meta__ = {
@@ -108,7 +108,7 @@ __meta__ = {
 }
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource( 2 )
 autoplay = true
 
 [connection signal="pressed" from="BotonHost" to="." method="_on_BotonHost_pressed"]

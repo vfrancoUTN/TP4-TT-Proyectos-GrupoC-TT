@@ -10,6 +10,7 @@ var peer = null
 var nombre_jugador = "Sin Nombre"
 var jugadores = {}
 var jugadores_listos = {}
+var rng = RandomNumberGenerator.new()
 var nivel = 0
 
 signal actualizacion_lista_jugadores()
@@ -51,17 +52,17 @@ func borrar_jugador(id):
 	emit_signal("actualizacion_lista_jugadores")
 	
 remote func pre_inicio_juego():
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	var nivel = rng.randi_range(0, 3)
-	var juego
 	var jugador = load("res://Jugador/PrimeraPersona.tscn").instance()
+	var nivel
+	
+	if get_tree().is_network_server():
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()
+		nivel = rng.randi_range(0, 3)
 			
 	for j_id in jugadores:
 		jugador.set_network_master(j_id)
 		
-	rset_id(2, "nivel", nivel)
-			
 	if get_tree().get_network_unique_id() == 1:
 		if nivel == 0:
 			juego = load("res://Niveles/Nivel1.tscn").instance()
@@ -71,7 +72,7 @@ remote func pre_inicio_juego():
 			juego = load("res://Niveles/Nivel3.tscn").instance()
 		else:
 			juego = load("res://Niveles/Nivel4.tscn").instance()
-	elif get_tree().get_network_unique_id() != 1:
+	else:
 		if nivel == 0:
 			juego = load("res://Niveles/Nivel1P2.tscn").instance()
 		elif nivel == 1:
@@ -87,10 +88,10 @@ remote func pre_inicio_juego():
 	elif jugadores.size() == 0:
 		post_inicio_juego()
 			
-	print(str(nivel))
+	print("Nivel: " + str(nivel))
 		
 	get_tree().get_root().add_child(juego)
-	get_tree().get_root().get_node("Lobby").hide()
+	#get_tree().get_root().get_node("lobby").hide()
 	#var escena_jugador = preload("res://Jugador/PrimeraPersona.tscn")
 	#jugador.set_network_master(get_tree().get_network_unique_id())
 	
@@ -115,6 +116,8 @@ remote func pre_inicio_juego():
 #		elif jugadores.size() == 0:
 #			post_inicio_juego()
 			
+<<<<<<< Updated upstream
+=======
 #remote func cargar_mapa(num):
 #	var juego
 #	if num == 0:
@@ -129,14 +132,19 @@ remote func pre_inicio_juego():
 #	get_tree().get_root().add_child(juego)
 #	get_tree().get_root().get_node("Lobby").hide()
 
+remote func cargar_nivel():
+	pass
+	
+
+>>>>>>> Stashed changes
 remote func post_inicio_juego():
 	get_tree().set_pause(false)
 	
 remote func juego_listo(id):
 	assert(get_tree().is_network_server())
 	
-	#if not id in jugadores_listos:
-	#	jugadores_listos.append(id)
+	if not id in jugadores_listos:
+		jugadores_listos.append(id)
 		
 	if jugadores_listos.size() == jugadores.size():
 		for j in jugadores:
@@ -174,7 +182,7 @@ func comenzar_juego():
 	print(get_tree().get_network_unique_id())
 		
 	for j in jugadores:
-		rpc_id(j, "pre_inicio_juego")
+		rpc_id(j, "pre_inicio_juego", pos_spawn)
 		
 	pre_inicio_juego()
 	
