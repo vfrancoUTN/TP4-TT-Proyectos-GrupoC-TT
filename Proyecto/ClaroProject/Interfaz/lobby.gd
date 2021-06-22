@@ -2,7 +2,7 @@ extends Control
 
 onready var lobby = $"."
 onready var conexion = $"Conexion"
-onready var nombre_jugador = $"/Conexion/Nombre"
+onready var nombre_jugador = $"Conexion/Nombre"
 onready var label_error = $"Conexion/LabelError"
 onready var jugadores = $"Jugadores"
 onready var ip_ad = $"Conexion/IP"
@@ -51,8 +51,8 @@ func _boton_unirse_presionado():
 	boton_crear.disabled = true
 	boton_unirse.disabled = true
 		
-	var nombre_jugador = nombre_jugador.text
-	Multijugador.unirse_servidor(ip, nombre_jugador)
+	var nom_jugador = nombre_jugador.text
+	Multijugador.unirse_servidor(ip, nom_jugador)
 		
 func _conexion_ok():
 	conexion.hide()
@@ -77,11 +77,11 @@ func _error_juego(error):
 	boton_unirse.disabled = false
 	
 func actualizar_sala():
-	var jugadores = Multijugador.get_lista_jugadores()
-	jugadores.sort()
+	var jugadores_alt = Multijugador.get_lista_jugadores()
+	jugadores_alt.sort()
 	lista_jugadores.clear()
 	lista_jugadores.add_item(Multijugador.get_nombre_jugador() + " (Vos)")
-	for j in jugadores:
+	for j in jugadores_alt:
 		lista_jugadores.add_item(j)
 		
 	boton_iniciar.disabled = not get_tree().is_network_server()
