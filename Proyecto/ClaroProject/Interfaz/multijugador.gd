@@ -30,7 +30,7 @@ func _jugador_desconectado(id):
 	else:
 		borrar_jugador(id)
 		
-#func _conexion_ok():
+func _conexion_ok():
 	emit_signal("conexion_exitosa")
 	
 func _servidor_desconectado():
@@ -57,7 +57,6 @@ remote func pre_inicio_juego():
 	var jugador = load("res://Jugador/PrimeraPersona.tscn").instance()
 			
 	for j_id in jugadores:
-		j_id.set_name(str(j_id))
 		jugador.set_network_master(j_id)
 			
 	if get_tree().get_network_unique_id() == 1:
