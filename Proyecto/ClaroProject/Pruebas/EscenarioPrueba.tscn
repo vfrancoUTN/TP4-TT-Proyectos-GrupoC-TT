@@ -20,7 +20,7 @@
 [ext_resource path="res://Puzzles/Puzzle1.tscn" type="PackedScene" id=18]
 [ext_resource path="res://Jugador/Enemigo_Prueba.gd" type="Script" id=19]
 [ext_resource path="res://Puzzles/Puzzle_1C.tscn" type="PackedScene" id=20]
-[ext_resource path="res://Puzzles/Puzzle1_B.tscn" type="PackedScene" id=21]
+[ext_resource path="res://Puzzles/Puzzle_1B.tscn" type="PackedScene" id=21]
 
 [sub_resource type="PanoramaSky" id=1]
 radiance_size = 4
