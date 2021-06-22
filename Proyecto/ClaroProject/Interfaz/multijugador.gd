@@ -60,7 +60,7 @@ remote func pre_inicio_juego():
 	for j_id in jugadores:
 		jugador.set_network_master(j_id)
 		
-	rset("nivel", nivel)
+	rset_id(2, "nivel", nivel)
 			
 	if get_tree().get_network_unique_id() == 1:
 		if nivel == 0:
