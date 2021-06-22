@@ -74,6 +74,7 @@ remote func pre_inicio_juego():
 			juego = load("res://Niveles/Nivel4P2.tscn").instance()
 		
 	get_tree().get_root().add_child(juego)
+	get_tree().get_root().get_node("/root/Lobby").hide()
 	#get_tree().get_root().get_node("lobby").hide()
 	#var escena_jugador = preload("res://Jugador/PrimeraPersona.tscn")
 	#jugador.set_network_master(get_tree().get_network_unique_id())

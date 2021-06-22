@@ -258,10 +258,13 @@ window_title = "Alerta!"
 
 [node name="BotonVolver" type="Button" parent="."]
 modulate = Color( 1, 1, 1, 0.498039 )
+anchor_left = 0.5
 anchor_top = 1.0
+anchor_right = 0.5
 anchor_bottom = 1.0
+margin_left = -179.0
 margin_top = -100.0
-margin_right = 358.0
+margin_right = 179.0
 custom_fonts/font = SubResource( 9 )
 text = "VOLVER"
 __meta__ = {

@@ -20,7 +20,7 @@ func _boton_crear_presionado():
 		$Conexion/LabelError.text = "Nombre de usuario no válido!"
 		return
 		
-	$Conexion.hide()
+	$Conexion.show()
 	$Jugadores.show()
 	$Conexion/LabelError.text = ""
 	
