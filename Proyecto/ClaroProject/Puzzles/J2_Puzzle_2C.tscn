@@ -76,7 +76,7 @@ margin_right = -930.0
 margin_bottom = 501.0
 custom_fonts/font = SubResource( 1 )
 text = "a    a    a   + 3
-a    b    b   13
+a    b    b   1
 10  c    C     6
 A  + B  + c =    ?
  "

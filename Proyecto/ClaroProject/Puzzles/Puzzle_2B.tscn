@@ -53,10 +53,10 @@ __meta__ = {
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_top = -292.216
-margin_bottom = -157.216
+margin_top = -292.0
+margin_bottom = -179.0
 custom_fonts/font = SubResource( 1 )
-text = "PUZZLE 1B"
+text = "PWJCANEJW"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -73,7 +73,7 @@ margin_top = -280.049
 margin_right = 381.95
 margin_bottom = -184.049
 custom_fonts/font = SubResource( 3 )
-text = "Incorrecta"
+text = "everest"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -89,7 +89,7 @@ margin_top = -139.287
 margin_right = 381.95
 margin_bottom = -43.2868
 custom_fonts/font = SubResource( 3 )
-text = "CORRECTA"
+text = "ACONCAGUA"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -105,7 +105,7 @@ margin_top = -0.169678
 margin_right = 381.95
 margin_bottom = 95.8308
 custom_fonts/font = SubResource( 5 )
-text = "INCorrecta"
+text = "kilamanjaro"
 __meta__ = {
 "_edit_use_anchors_": false
 }
