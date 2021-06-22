@@ -11,9 +11,15 @@ var secuencial=0
 var atrapadas = 4
 
 func _on_Trampa_body_entered(body):
+<<<<<<< HEAD
+	atrapadas = atrapadas + 1
+	
+	if atrapadas > 3:
+=======
 	atrapadas = atrapadas - 1
 	secuencial+=1
 	if atrapadas == 0:
+>>>>>>> master
 		if body.has_method("morir"):
 			body.morir()
 	
