@@ -3,8 +3,11 @@ extends KinematicBody
 export (float) var velocidad
 export (int) var distanciaPerseguidor = 10
 onready var pisadas = $Pisadas
-onready var puzzle = $"../../Puzzle1"
-
+onready var puzzle1 = $"../../Puzzle1"
+onready var puzzle2 = $"../../Puzzle2"
+onready var puzzle3 = $"../../Puzzle3"
+onready var juego = $"../.."
+var atrapadas = 4
 
 var posObjetivo = Vector3()
 var navegacion = Navigation
@@ -76,12 +79,18 @@ func sonidoPisadas():
 		pisadas.playing = false
 
 func _on_Area_body_entered(body):
+	juego.enPuzzle = true
 	get_tree().paused == true
-	puzzle.setPuzzle(true)
-	get_tree().paused == true
+	atrapadas -= 1
+	if atrapadas == 1:
+		puzzle1.show()
+	if atrapadas == 2:
+		puzzle2.show()
+	if atrapadas == 3:
+		puzzle3.show()
+	if atrapadas == 0:
+		get_tree().change_scene("res://Interfaz/PantallaDerrota.tscn")
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	numeroAletorio = rng.randi_range(1,3)    
-	puzzle.show()
 	global_transform.origin=(Vector3(36, global_transform.origin.y, 31))
 	
 #primero da el puzzle

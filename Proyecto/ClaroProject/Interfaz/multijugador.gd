@@ -11,6 +11,7 @@ var nombre_jugador = "Sin Nombre"
 var jugadores = {}
 var jugadores_listos = {}
 var nivel = 0
+var jugando = true
 
 signal actualizacion_lista_jugadores()
 signal conexion_fallida()

@@ -25,10 +25,6 @@
 			"text": "Usa la \"W\" para moverte hacia adelante, \n\"A\" para la izquierda, \n\"D\" para la derecha y \n\"S\" para atrás"
 		},
 		{
-			"event_id": "dialogic_023",
-			"wait_seconds": 5
-		},
-		{
 			"character": "character-1624129987.json",
 			"event_id": "dialogic_001",
 			"portrait": "",
