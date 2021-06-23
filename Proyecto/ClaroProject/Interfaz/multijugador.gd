@@ -29,7 +29,7 @@ func _jugador_desconectado(id):
 	else:
 		borrar_jugador(id)
 		
-func _conexion_ok():
+#func _conexion_ok():
 	emit_signal("conexion_exitosa")
 	
 func _servidor_desconectado():
@@ -51,16 +51,19 @@ func borrar_jugador(id):
 	emit_signal("actualizacion_lista_jugadores")
 	
 remote func pre_inicio_juego():
-	var rng = RandomNumberGenerator.new()
-	rng.randomize()
-	var nivel = rng.randi_range(0, 3)
+
+	if get_tree().is_network_server():
+		var rng = RandomNumberGenerator.new()
+		rng.randomize()
+		var nivel = rng.randi_range(0, 3)
 	var juego
 	var jugador = load("res://Jugador/PrimeraPersona.tscn").instance()
+	
+	rpc_id(get_tree().get_network_unique_id(), "cargar_mapa", nivel)
 			
 	for j_id in jugadores:
+		j_id.set_name(str(j_id))
 		jugador.set_network_master(j_id)
-		
-	rset_id(2, "nivel", nivel)
 			
 	if get_tree().get_network_unique_id() == 1:
 		if nivel == 0:
@@ -71,7 +74,7 @@ remote func pre_inicio_juego():
 			juego = load("res://Niveles/Nivel3.tscn").instance()
 		else:
 			juego = load("res://Niveles/Nivel4.tscn").instance()
-	elif get_tree().get_network_unique_id() != 1:
+	else:
 		if nivel == 0:
 			juego = load("res://Niveles/Nivel1P2.tscn").instance()
 		elif nivel == 1:
@@ -80,14 +83,11 @@ remote func pre_inicio_juego():
 			juego = load("res://Niveles/Nivel3P2.tscn").instance()
 		else:
 			juego = load("res://Niveles/Nivel4P2.tscn").instance()
-	#rpc_id(2, "cargar_mapa", nivel)
 			
 	if not get_tree().is_network_server():
 		rpc_id(1, "juego_listo", get_tree().get_network_unique_id())
 	elif jugadores.size() == 0:
 		post_inicio_juego()
-			
-	print(str(nivel))
 		
 	get_tree().get_root().add_child(juego)
 	get_tree().get_root().get_node("Lobby").hide()
@@ -95,7 +95,7 @@ remote func pre_inicio_juego():
 	#jugador.set_network_master(get_tree().get_network_unique_id())
 	
 	
-#	or j_id in pos_spawn:
+#	for j_id in pos_spawn:
 #		var pos_aparicion = juego.get_node("PuntosSpawn/" + str(pos_spawn[j_id])).position
 #		var jugador = escena_jugador.instance()
 #
@@ -114,29 +114,29 @@ remote func pre_inicio_juego():
 #			rpc_id(1, "juego_listo", get_tree().get_network_unique_id())
 #		elif jugadores.size() == 0:
 #			post_inicio_juego()
-			
-#remote func cargar_mapa(num):
-#	var juego
-#	if num == 0:
-#		juego = load("res://Niveles/Nivel1P2.tscn").instance()
-#	elif num == 1:
-#		juego = load("res://Niveles/Nivel2P2.tscn").instance()
-#	elif num == 2:
-#		juego = load("res://Niveles/Nivel3P2.tscn").instance()
-#	else:
-#		juego = load("res://Niveles/Nivel4P2.tscn").instance()
-#
-#	get_tree().get_root().add_child(juego)
-#	get_tree().get_root().get_node("Lobby").hide()
 
+remote func cargar_mapa(nivel):
+	var juego
+	if nivel == 0:
+		juego = load("res://Niveles/Nivel1P2.tscn").instance()
+	elif nivel == 1:
+		juego = load("res://Niveles/Nivel2P2.tscn").instance()
+	elif nivel == 2:
+		juego = load("res://Niveles/Nivel3P2.tscn").instance()
+	else:
+		juego = load("res://Niveles/Nivel4P2.tscn").instance()
+	
+	get_tree().get_root().add_child(juego)
+	get_tree().get_root().get_node("Lobby").hide()
+			
 remote func post_inicio_juego():
 	get_tree().set_pause(false)
 	
 remote func juego_listo(id):
 	assert(get_tree().is_network_server())
 	
-	#if not id in jugadores_listos:
-	#	jugadores_listos.append(id)
+	if not id in jugadores_listos:
+		jugadores_listos.append(id)
 		
 	if jugadores_listos.size() == jugadores.size():
 		for j in jugadores:
@@ -174,7 +174,7 @@ func comenzar_juego():
 	print(get_tree().get_network_unique_id())
 		
 	for j in jugadores:
-		rpc_id(j, "pre_inicio_juego")
+		rpc_id(j, "pre_inicio_juego", pos_spawn)
 		
 	pre_inicio_juego()
 	
