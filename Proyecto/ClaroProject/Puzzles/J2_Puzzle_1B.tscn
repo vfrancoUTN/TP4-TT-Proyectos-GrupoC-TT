@@ -1,9 +1,12 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Imagenes/PantallaMuerte.jpg" type="Texture" id=1]
 [ext_resource path="res://Fuentes/remnant/Remnant-Regular.ttf" type="DynamicFontData" id=2]
-[ext_resource path="res://Puzzles/Puzzle_C.gd" type="Script" id=3]
+[ext_resource path="res://Puzzles/Puzzle_B.gd" type="Script" id=3]
 [ext_resource path="res://Musica/Main_Menu.mp3" type="AudioStream" id=4]
+[ext_resource path="res://Puzzles/Imagenes y NOTA/PUZZLE_2C_IMAGENES/PUNTO_CARDINAL.png" type="Texture" id=5]
+[ext_resource path="res://Puzzles/Imagenes y NOTA/PUZZLE_1B_IMAGENES/220px-Hammer_and_sickle.svg.png" type="Texture" id=6]
+[ext_resource path="res://Puzzles/Imagenes y NOTA/ABCEDARIO_NUMERADO.png" type="Texture" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 100
@@ -26,7 +29,7 @@ font_path = "res://Fuentes/remnant/Remnant-Regular.ttf"
 size = 56
 font_data = SubResource( 4 )
 
-[node name="Puzzle_1C" type="Control"]
+[node name="J2_Puzzle1_B" type="Control"]
 pause_mode = 2
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -40,6 +43,8 @@ modulate = Color( 0.513726, 0.513726, 0.513726, 1 )
 self_modulate = Color( 0.815686, 0.815686, 0.815686, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = -2.82849
+margin_right = -2.82849
 texture = ExtResource( 1 )
 expand = true
 stretch_mode = 1
@@ -47,20 +52,42 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="."]
+[node name="PISTA 1" type="Label" parent="."]
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-margin_top = -453.0
-margin_bottom = -157.0
+margin_left = 118.0
+margin_top = -418.0
+margin_right = 118.0
+margin_bottom = -305.0
 custom_fonts/font = SubResource( 1 )
-text = "BCPMEYPCL"
+text = "ANAGRAMA (1.....1)"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PISTA 4" type="Label" parent="."]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_left = 56.0
+margin_top = -240.0
+margin_right = -930.0
+margin_bottom = 501.0
+custom_fonts/font = SubResource( 1 )
+text = "a + a + a = 30
+a + b + b = 16
+c + c + c  =   0
+c + b + c =    ?
+ "
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Opcion 1" type="Button" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.481
 anchor_top = 0.652
@@ -71,28 +98,30 @@ margin_top = -280.049
 margin_right = 381.95
 margin_bottom = -184.049
 custom_fonts/font = SubResource( 3 )
-text = "GUTEMBERG"
+text = "Albania"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Opcion 2" type="Button" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.481
 anchor_top = 0.652
 anchor_right = 0.481
 anchor_bottom = 0.652
-margin_left = -317.878
-margin_top = -147.772
-margin_right = 379.122
-margin_bottom = -51.7722
+margin_left = -315.05
+margin_top = -139.287
+margin_right = 381.95
+margin_bottom = -43.2868
 custom_fonts/font = SubResource( 3 )
-text = "ARQUIMEDES"
+text = "Andorra"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Opcion 3" type="Button" parent="."]
+visible = false
 modulate = Color( 1, 1, 1, 0.498039 )
 anchor_left = 0.481
 anchor_top = 0.652
@@ -103,7 +132,7 @@ margin_top = -0.169678
 margin_right = 381.95
 margin_bottom = 95.8308
 custom_fonts/font = SubResource( 5 )
-text = "TESLA"
+text = "ALGERIA"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -111,6 +140,37 @@ __meta__ = {
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 4 )
 autoplay = true
+
+[node name="PISTA 2" type="TextureRect" parent="."]
+visible = false
+margin_left = 984.0
+margin_top = 306.0
+margin_right = 1204.0
+margin_bottom = 526.0
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PISTA 3" type="TextureRect" parent="."]
+margin_left = 996.0
+margin_top = 412.0
+margin_right = 1193.0
+margin_bottom = 667.0
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PISTA 5" type="TextureRect" parent="."]
+margin_left = 1436.0
+margin_top = 330.0
+margin_right = 1765.0
+margin_bottom = 789.0
+texture = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [connection signal="pressed" from="Opcion 1" to="." method="_on_Opcion_1_pressed"]
 [connection signal="pressed" from="Opcion 2" to="." method="_on_Opcion_2_pressed"]

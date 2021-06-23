@@ -3,8 +3,9 @@ extends KinematicBody
 export (float) var velocidad
 export (int) var distanciaPerseguidor = 10
 onready var pisadas = $Pisadas
-onready var puzzle = $"../../Puzzle1"
-
+onready var puzzle1C = $"../../Puzzle_1C"
+onready var puzzle1B = $"../../Puzzle_1B"
+onready var puzzle2C = $"../../Puzzle_2C"
 
 var posObjetivo = Vector3()
 var navegacion = Navigation
@@ -14,8 +15,7 @@ var indice = 0
 var jugador = KinematicBody
 var moviendose = false
 
-var rng = RandomNumberGenerator.new()
-var numeroAletorio
+var atrapadas = 0
 
 func _ready():
 	jugador = get_tree().get_nodes_in_group("Jugador")[0]
@@ -76,12 +76,24 @@ func sonidoPisadas():
 		pisadas.playing = false
 
 func _on_Area_body_entered(body):
-	get_tree().paused == true
-	puzzle.setPuzzle(true)
+	atrapadas = atrapadas + 1
+	
+	if atrapadas > 3:
+		if body.has_method("morir"):
+			body.morir()
+	
 	get_tree().paused == true
 	Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
-	numeroAletorio = rng.randi_range(1,3)    
-	puzzle.show()
+	
+	if atrapadas == 1 :
+		puzzle2C.setPuzzle(true)
+		puzzle2C.show()
+	if atrapadas == 2:
+		puzzle1B.setPuzzle(true)
+		puzzle1B.show()
+	if atrapadas == 3:
+		puzzle1C.setPuzzle(true)
+		puzzle1C.show()
 	global_transform.origin=(Vector3(36, global_transform.origin.y, 31))
 	
 #primero da el puzzle
