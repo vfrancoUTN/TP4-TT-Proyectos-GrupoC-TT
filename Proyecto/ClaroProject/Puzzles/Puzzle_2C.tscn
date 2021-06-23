@@ -54,7 +54,7 @@ anchor_bottom = 0.5
 margin_top = -453.0
 margin_bottom = -157.0
 custom_fonts/font = SubResource( 1 )
-text = "BCPMEYPCL"
+text = "EJMRGEV"
 align = 1
 __meta__ = {
 "_edit_use_anchors_": false
@@ -71,7 +71,7 @@ margin_top = -280.049
 margin_right = 381.95
 margin_bottom = -184.049
 custom_fonts/font = SubResource( 3 )
-text = "GUTEMBERG"
+text = "SOCRATES"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -87,7 +87,7 @@ margin_top = -147.772
 margin_right = 379.122
 margin_bottom = -51.7722
 custom_fonts/font = SubResource( 3 )
-text = "ARQUIMEDES"
+text = "nietzche"
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -98,12 +98,12 @@ anchor_left = 0.481
 anchor_top = 0.652
 anchor_right = 0.481
 anchor_bottom = 0.652
-margin_left = -315.05
+margin_left = -317.05
 margin_top = -0.169678
-margin_right = 381.95
+margin_right = 379.95
 margin_bottom = 95.8308
 custom_fonts/font = SubResource( 5 )
-text = "TESLA"
+text = "descarteS"
 __meta__ = {
 "_edit_use_anchors_": false
 }
