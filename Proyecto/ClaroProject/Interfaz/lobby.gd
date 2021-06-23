@@ -87,7 +87,7 @@ func actualizar_sala():
 	boton_iniciar.disabled = not get_tree().is_network_server()
 	
 func _boton_volver_presionado():
-	get_tree().change_scene(res://Interfaz/PantallaInicio.tscn")
+	get_tree().change_scene("res://Interfaz/PantallaInicio.tscn")
 	
 func _boton_iniciar_presionado():
 	Multijugador.comenzar_juego()
