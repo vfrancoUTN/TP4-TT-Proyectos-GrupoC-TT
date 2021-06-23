@@ -25,66 +25,66 @@ func _ready():
 	#	$Conexion/Nombre.text = escritorio[escritorio.size() - 2]
 		
 func _boton_crear_presionado():
-    if nombre_jugador.text == "":
-        label_error.text = "Nombre de usuario no válido!"
+	if nombre_jugador.text == "":
+		label_error.text = "Nombre de usuario no válido!"
 		return
 		
-    conexion.hide()
-    jugadores.show()
-    label_error.text = ""
+	conexion.hide()
+	jugadores.show()
+	label_error.text = ""
 	
-    var nom_jugador = nombre_jugador.text
-    Multijugador.crear_servidor(nom_jugador)
+	var nom_jugador = nombre_jugador.text
+	Multijugador.crear_servidor(nom_jugador)
 	actualizar_sala()
 	
 func _boton_unirse_presionado():
-    if nombre_jugador.text == "":
-        label_error.text == "Nombre de usuario no válido!"
+	if nombre_jugador.text == "":
+		label_error.text == "Nombre de usuario no válido!"
 		return
 		
-    var ip = ip_ad.text
+	var ip = ip_ad.text
 	if not ip.is_valid_ip_address():
-        label_error.text = "Dirección IP no válida!"
+		label_error.text = "Dirección IP no válida!"
 		return
 	
-    label_error.text = ""
-    boton_crear.disabled = true
-    boton_unirse.disabled = true
+	label_error.text = ""
+	boton_crear.disabled = true
+	boton_unirse.disabled = true
 		
-    var nombre_jugador = nombre_jugador.text
+	var nombre_jugador = nombre_jugador.text
 	Multijugador.unirse_servidor(ip, nombre_jugador)
 		
 func _conexion_ok():
-    conexion.hide()
-    jugadores.show()
+	conexion.hide()
+	jugadores.show()
 	
 func _conexion_fallida():
-    boton_crear.disabled = false
-    boton_unirse.disabled = false
-    label_error.set_text("Conexión fallida.")
+	boton_crear.disabled = false
+	boton_unirse.disabled = false
+	label_error.set_text("Conexión fallida.")
 	
 func _juego_terminado():
 	show()
-    conexion.show()
-    jugadores.hide()
-    boton_crear.disabled = false
-    boton_unirse.disabled = false
+	conexion.show()
+	jugadores.hide()
+	boton_crear.disabled = false
+	boton_unirse.disabled = false
 	
 func _error_juego(error):
-    ventana_error.dialog_text = error
-    ventana_error.popup_centered_minsize()
-    boton_crear.disabled = false
-    boton_unirse.disabled = false
+	ventana_error.dialog_text = error
+	ventana_error.popup_centered_minsize()
+	boton_crear.disabled = false
+	boton_unirse.disabled = false
 	
 func actualizar_sala():
 	var jugadores = Multijugador.get_lista_jugadores()
 	jugadores.sort()
-    lista_jugadores.clear()
-    lista_jugadores.add_item(Multijugador.get_nombre_jugador() + " (Vos)")
+	lista_jugadores.clear()
+	lista_jugadores.add_item(Multijugador.get_nombre_jugador() + " (Vos)")
 	for j in jugadores:
-        lista_jugadores.add_item(j)
+		lista_jugadores.add_item(j)
 		
-    boton_iniciar.disabled = not get_tree().is_network_server()
+	boton_iniciar.disabled = not get_tree().is_network_server()
 	
 func _boton_iniciar_presionado():
 	Multijugador.comenzar_juego()

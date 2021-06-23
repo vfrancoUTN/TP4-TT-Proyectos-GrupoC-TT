@@ -116,18 +116,18 @@ remote func pre_inicio_juego():
 #			post_inicio_juego()
 
 remote func cargar_mapa(nivel):
-    var juego
-    if nivel == 0:
-        juego = load("res://Niveles/Nivel1P2.tscn").instance()
-    elif nivel == 1:
-        juego = load("res://Niveles/Nivel2P2.tscn").instance()
-    elif nivel == 2:
-        juego = load("res://Niveles/Nivel3P2.tscn").instance()
-    else:
-        juego = load("res://Niveles/Nivel4P2.tscn").instance()
-    
-    get_tree().get_root().add_child(juego)
-    get_tree().get_root().get_node("Lobby").hide()
+	var juego
+	if nivel == 0:
+		juego = load("res://Niveles/Nivel1P2.tscn").instance()
+	elif nivel == 1:
+		juego = load("res://Niveles/Nivel2P2.tscn").instance()
+	elif nivel == 2:
+		juego = load("res://Niveles/Nivel3P2.tscn").instance()
+	else:
+		juego = load("res://Niveles/Nivel4P2.tscn").instance()
+	
+	get_tree().get_root().add_child(juego)
+	get_tree().get_root().get_node("Lobby").hide()
 			
 remote func post_inicio_juego():
 	get_tree().set_pause(false)
